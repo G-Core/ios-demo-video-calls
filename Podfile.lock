@@ -1,0 +1,16 @@
+PODS:
+  - mediasoup_ios_client (1.5.3)
+
+DEPENDENCIES:
+  - mediasoup_ios_client (= 1.5.3)
+
+SPEC REPOS:
+  trunk:
+    - mediasoup_ios_client
+
+SPEC CHECKSUMS:
+  mediasoup_ios_client: 100b82dc6a47dd72c9bc1897c9b8159de0b457a1
+
+PODFILE CHECKSUM: 0416eb49a17a476a9ae3dcde796f7d508aed132a
+
+COCOAPODS: 1.11.2

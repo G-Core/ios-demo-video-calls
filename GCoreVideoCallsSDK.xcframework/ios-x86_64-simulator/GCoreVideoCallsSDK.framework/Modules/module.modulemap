@@ -1,0 +1,11 @@
+module GCoreVideoCallsSDK {
+    umbrella header "Headers/GCoreVideoCallsSDK.h"
+
+    export *
+    module * { export * }
+}
+
+module GCoreVideoCallsSDK.Swift {
+    header "Headers/GCoreVideoCallsSDK-Swift.h"
+    requires objc
+}

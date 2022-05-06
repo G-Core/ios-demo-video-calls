@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6305997A281022EC006780A9 /* GCModeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63059979281022EC006780A9 /* GCModeratorViewController.swift */; };
+		6306651B28180BE000BA8164 /* GCTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306651A28180BE000BA8164 /* GCTitleViewController.swift */; };
+		6306651D2818282C00BA8164 /* GCCameraPositionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306651C2818282C00BA8164 /* GCCameraPositionButton.swift */; };
+		6306652028182EE900BA8164 /* GCVideoCallBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306651F28182EE900BA8164 /* GCVideoCallBlurView.swift */; };
+		630665222818302200BA8164 /* GCVideoCallControlButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630665212818302200BA8164 /* GCVideoCallControlButtonsView.swift */; };
+		630665242818355800BA8164 /* GCVideoCallCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630665232818355800BA8164 /* GCVideoCallCollectionView.swift */; };
+		6306652C28183D4000BA8164 /* ModeratorMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306652B28183D4000BA8164 /* ModeratorMethods.swift */; };
+		6308999227F34C5B0023F1D8 /* SessionCaptureWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308999127F34C5B0023F1D8 /* SessionCaptureWrapper.swift */; };
+		6308999527F582E40023F1D8 /* GCVideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308999427F582E40023F1D8 /* GCVideoCallViewController.swift */; };
+		6308999727F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308999627F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift */; };
+		6308999B27F6312C0023F1D8 /* GCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308999A27F6312C0023F1D8 /* GCModel.swift */; };
+		631C5E83281AC08E00252522 /* AlertFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C5E82281AC08E00252522 /* AlertFabric.swift */; };
+		631C5E85281B677300252522 /* GCWaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C5E84281B677300252522 /* GCWaitingView.swift */; };
+		63251D1227FF20290060A484 /* GCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63251D1127FF20290060A484 /* GCBaseViewController.swift */; };
+		63251D1627FF343D0060A484 /* GCVideoCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63251D1527FF343D0060A484 /* GCVideoCallButton.swift */; };
+		632960442812E24F00324DB5 /* GCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632960432812E24F00324DB5 /* GCTableViewCell.swift */; };
+		63297A1927E9EC05007C5749 /* VideoCallWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63297A1827E9EC05007C5749 /* VideoCallWrapper.swift */; };
+		632DA21727E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632DA21627E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework */; };
+		632DA21827E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 632DA21627E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6338960427E9E77D007D339F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338960327E9E77D007D339F /* AppDelegate.swift */; };
+		6338960827E9E77D007D339F /* GCStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338960727E9E77D007D339F /* GCStartViewController.swift */; };
+		6338960D27E9E77F007D339F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6338960C27E9E77F007D339F /* Assets.xcassets */; };
+		6338961027E9E77F007D339F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6338960E27E9E77F007D339F /* LaunchScreen.storyboard */; };
+		634226CF27EC47EF00B8672E /* GCVideoCallCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634226CE27EC47EF00B8672E /* GCVideoCallCollectionCell.swift */; };
+		634226D127EC794F00B8672E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634226D027EC794F00B8672E /* Extensions.swift */; };
+		634226D527ECA2EB00B8672E /* Montserrat_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 634226D427ECA2EA00B8672E /* Montserrat_Medium.ttf */; };
+		634226E127ECB30900B8672E /* Montserrat_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 634226E027ECB30900B8672E /* Montserrat_Regular.ttf */; };
+		634226E327ECBE9700B8672E /* GCoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634226E227ECBE9700B8672E /* GCoreButton.swift */; };
+		634226E527EDFF1B00B8672E /* GCoreTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634226E427EDFF1B00B8672E /* GCoreTextField.swift */; };
+		635DECF3280DACBC003E349D /* GCLocalVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635DECF2280DACBC003E349D /* GCLocalVideoView.swift */; };
+		636D765B27FB48F600F7C131 /* GCEndScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D765A27FB48F600F7C131 /* GCEndScreenViewController.swift */; };
+		636FF45A28218F8D0053C7D1 /* RoomInitialStateSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF45928218F8D0053C7D1 /* RoomInitialStateSetter.swift */; };
+		63B97EBD27FD8BC600638D94 /* GCSharedLinksStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B97EBC27FD8BC600638D94 /* GCSharedLinksStackView.swift */; };
+		63D5AFE927F1BD33007A5CBC /* GCPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFE827F1BD33007A5CBC /* GCPreviewViewController.swift */; };
+		63D5AFEB27F1D34C007A5CBC /* GCSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFEA27F1D34C007A5CBC /* GCSwitch.swift */; };
+		63D5AFED27F1E209007A5CBC /* GCSwitchsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFEC27F1E209007A5CBC /* GCSwitchsLabel.swift */; };
+		63D5AFF027F1EBD2007A5CBC /* GCCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFEF27F1EBD2007A5CBC /* GCCameraPreview.swift */; };
+		63E1C69128144E30004192F0 /* GCModeratorControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E1C69028144E30004192F0 /* GCModeratorControlView.swift */; };
+		A16538A5C76B0D09C6C1A7F5 /* Pods_GCoreVideoCalls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7662F442DE39437D42F2DE2A /* Pods_GCoreVideoCalls.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		632DA21927E9EF8D00902DE4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				632DA21827E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		63059979281022EC006780A9 /* GCModeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCModeratorViewController.swift; sourceTree = "<group>"; };
+		6306651A28180BE000BA8164 /* GCTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCTitleViewController.swift; sourceTree = "<group>"; };
+		6306651C2818282C00BA8164 /* GCCameraPositionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCameraPositionButton.swift; sourceTree = "<group>"; };
+		6306651F28182EE900BA8164 /* GCVideoCallBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallBlurView.swift; sourceTree = "<group>"; };
+		630665212818302200BA8164 /* GCVideoCallControlButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallControlButtonsView.swift; sourceTree = "<group>"; };
+		630665232818355800BA8164 /* GCVideoCallCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallCollectionView.swift; sourceTree = "<group>"; };
+		6306652B28183D4000BA8164 /* ModeratorMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeratorMethods.swift; sourceTree = "<group>"; };
+		6308999127F34C5B0023F1D8 /* SessionCaptureWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCaptureWrapper.swift; sourceTree = "<group>"; };
+		6308999427F582E40023F1D8 /* GCVideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallViewController.swift; sourceTree = "<group>"; };
+		6308999627F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallButtonsStackView.swift; sourceTree = "<group>"; };
+		6308999A27F6312C0023F1D8 /* GCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCModel.swift; sourceTree = "<group>"; };
+		631C5E82281AC08E00252522 /* AlertFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFabric.swift; sourceTree = "<group>"; };
+		631C5E84281B677300252522 /* GCWaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCWaitingView.swift; sourceTree = "<group>"; };
+		63251D1127FF20290060A484 /* GCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCBaseViewController.swift; sourceTree = "<group>"; };
+		63251D1527FF343D0060A484 /* GCVideoCallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallButton.swift; sourceTree = "<group>"; };
+		632960432812E24F00324DB5 /* GCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCTableViewCell.swift; sourceTree = "<group>"; };
+		63297A1827E9EC05007C5749 /* VideoCallWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallWrapper.swift; sourceTree = "<group>"; };
+		632DA21627E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GCoreVideoCallsSDK.xcframework; sourceTree = "<group>"; };
+		6338960027E9E77D007D339F /* GCoreVideoCalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCoreVideoCalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6338960327E9E77D007D339F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6338960727E9E77D007D339F /* GCStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCStartViewController.swift; sourceTree = "<group>"; };
+		6338960C27E9E77F007D339F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6338960F27E9E77F007D339F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6338961127E9E77F007D339F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		634226CE27EC47EF00B8672E /* GCVideoCallCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallCollectionCell.swift; sourceTree = "<group>"; };
+		634226D027EC794F00B8672E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		634226D427ECA2EA00B8672E /* Montserrat_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat_Medium.ttf; sourceTree = "<group>"; };
+		634226DE27ECA59300B8672E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		634226DF27ECA5CF00B8672E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		634226E027ECB30900B8672E /* Montserrat_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat_Regular.ttf; sourceTree = "<group>"; };
+		634226E227ECBE9700B8672E /* GCoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCoreButton.swift; sourceTree = "<group>"; };
+		634226E427EDFF1B00B8672E /* GCoreTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCoreTextField.swift; sourceTree = "<group>"; };
+		635DECF2280DACBC003E349D /* GCLocalVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCLocalVideoView.swift; sourceTree = "<group>"; };
+		636D765A27FB48F600F7C131 /* GCEndScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCEndScreenViewController.swift; sourceTree = "<group>"; };
+		636FF45928218F8D0053C7D1 /* RoomInitialStateSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInitialStateSetter.swift; sourceTree = "<group>"; };
+		63B97EBC27FD8BC600638D94 /* GCSharedLinksStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSharedLinksStackView.swift; sourceTree = "<group>"; };
+		63D5AFE827F1BD33007A5CBC /* GCPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPreviewViewController.swift; sourceTree = "<group>"; };
+		63D5AFEA27F1D34C007A5CBC /* GCSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSwitch.swift; sourceTree = "<group>"; };
+		63D5AFEC27F1E209007A5CBC /* GCSwitchsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSwitchsLabel.swift; sourceTree = "<group>"; };
+		63D5AFEF27F1EBD2007A5CBC /* GCCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCameraPreview.swift; sourceTree = "<group>"; };
+		63E1C69028144E30004192F0 /* GCModeratorControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCModeratorControlView.swift; sourceTree = "<group>"; };
+		7662F442DE39437D42F2DE2A /* Pods_GCoreVideoCalls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCoreVideoCalls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3B9B4D3CB9F1E5CF1C20FB2 /* Pods-GCoreVideoCalls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCoreVideoCalls.release.xcconfig"; path = "Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls.release.xcconfig"; sourceTree = "<group>"; };
+		FEF0681E24F37A11D347752B /* Pods-GCoreVideoCalls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCoreVideoCalls.debug.xcconfig"; path = "Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		633895FD27E9E77D007D339F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16538A5C76B0D09C6C1A7F5 /* Pods_GCoreVideoCalls.framework in Frameworks */,
+				632DA21727E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		499585090733A430A19AC0F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEF0681E24F37A11D347752B /* Pods-GCoreVideoCalls.debug.xcconfig */,
+				F3B9B4D3CB9F1E5CF1C20FB2 /* Pods-GCoreVideoCalls.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6306651E28182E9E00BA8164 /* VideoCallModule */ = {
+			isa = PBXGroup;
+			children = (
+				63066526281837C900BA8164 /* Controller */,
+				63066527281837D900BA8164 /* View */,
+				630665252818378F00BA8164 /* ModeratorSubmodule */,
+			);
+			path = VideoCallModule;
+			sourceTree = "<group>";
+		};
+		630665252818378F00BA8164 /* ModeratorSubmodule */ = {
+			isa = PBXGroup;
+			children = (
+				63066529281837F100BA8164 /* View */,
+				63066528281837DE00BA8164 /* Controller */,
+				6306652B28183D4000BA8164 /* ModeratorMethods.swift */,
+			);
+			path = ModeratorSubmodule;
+			sourceTree = "<group>";
+		};
+		63066526281837C900BA8164 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6308999427F582E40023F1D8 /* GCVideoCallViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63066527281837D900BA8164 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				630665232818355800BA8164 /* GCVideoCallCollectionView.swift */,
+				6306651F28182EE900BA8164 /* GCVideoCallBlurView.swift */,
+				63251D1527FF343D0060A484 /* GCVideoCallButton.swift */,
+				634226CE27EC47EF00B8672E /* GCVideoCallCollectionCell.swift */,
+				6308999627F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift */,
+				630665212818302200BA8164 /* GCVideoCallControlButtonsView.swift */,
+				635DECF2280DACBC003E349D /* GCLocalVideoView.swift */,
+				631C5E84281B677300252522 /* GCWaitingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63066528281837DE00BA8164 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63059979281022EC006780A9 /* GCModeratorViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63066529281837F100BA8164 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63E1C69028144E30004192F0 /* GCModeratorControlView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6306652A2818386500BA8164 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6308999A27F6312C0023F1D8 /* GCModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6308999327F4DA8C0023F1D8 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				63297A1827E9EC05007C5749 /* VideoCallWrapper.swift */,
+				6308999127F34C5B0023F1D8 /* SessionCaptureWrapper.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		63251D0E27FF1FB80060A484 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63251D1127FF20290060A484 /* GCBaseViewController.swift */,
+				6306651A28180BE000BA8164 /* GCTitleViewController.swift */,
+				6338960727E9E77D007D339F /* GCStartViewController.swift */,
+				636D765A27FB48F600F7C131 /* GCEndScreenViewController.swift */,
+				63D5AFE827F1BD33007A5CBC /* GCPreviewViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63251D0F27FF1FE00060A484 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				634226E027ECB30900B8672E /* Montserrat_Regular.ttf */,
+				634226D427ECA2EA00B8672E /* Montserrat_Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		63251D1027FF1FED0060A484 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6338960327E9E77D007D339F /* AppDelegate.swift */,
+				634226D027EC794F00B8672E /* Extensions.swift */,
+				6338960C27E9E77F007D339F /* Assets.xcassets */,
+				6338960E27E9E77F007D339F /* LaunchScreen.storyboard */,
+				63251D0F27FF1FE00060A484 /* Fonts */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		633895F727E9E77D007D339F = {
+			isa = PBXGroup;
+			children = (
+				6338960227E9E77D007D339F /* GCoreVideoCalls */,
+				6338960127E9E77D007D339F /* Products */,
+				499585090733A430A19AC0F7 /* Pods */,
+				B296F98A7A42F4F0160FA1B4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6338960127E9E77D007D339F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6338960027E9E77D007D339F /* GCoreVideoCalls.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6338960227E9E77D007D339F /* GCoreVideoCalls */ = {
+			isa = PBXGroup;
+			children = (
+				636FF454282188710053C7D1 /* Helpers */,
+				6306651E28182E9E00BA8164 /* VideoCallModule */,
+				6306652A2818386500BA8164 /* Model */,
+				63251D0E27FF1FB80060A484 /* Controller */,
+				63D5AFEE27F1EBB1007A5CBC /* View */,
+				6308999327F4DA8C0023F1D8 /* Media */,
+				63251D1027FF1FED0060A484 /* Other */,
+				6338961127E9E77F007D339F /* Info.plist */,
+			);
+			path = GCoreVideoCalls;
+			sourceTree = "<group>";
+		};
+		636FF454282188710053C7D1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				631C5E82281AC08E00252522 /* AlertFabric.swift */,
+				636FF45928218F8D0053C7D1 /* RoomInitialStateSetter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		63D5AFEE27F1EBB1007A5CBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				634226E427EDFF1B00B8672E /* GCoreTextField.swift */,
+				634226E227ECBE9700B8672E /* GCoreButton.swift */,
+				63D5AFEA27F1D34C007A5CBC /* GCSwitch.swift */,
+				63D5AFEC27F1E209007A5CBC /* GCSwitchsLabel.swift */,
+				63D5AFEF27F1EBD2007A5CBC /* GCCameraPreview.swift */,
+				63B97EBC27FD8BC600638D94 /* GCSharedLinksStackView.swift */,
+				632960432812E24F00324DB5 /* GCTableViewCell.swift */,
+				6306651C2818282C00BA8164 /* GCCameraPositionButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B296F98A7A42F4F0160FA1B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				632DA21627E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework */,
+				7662F442DE39437D42F2DE2A /* Pods_GCoreVideoCalls.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		633895FF27E9E77D007D339F /* GCoreVideoCalls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6338961427E9E77F007D339F /* Build configuration list for PBXNativeTarget "GCoreVideoCalls" */;
+			buildPhases = (
+				BD7BC36838B2C4AB0E417E75 /* [CP] Check Pods Manifest.lock */,
+				633895FC27E9E77D007D339F /* Sources */,
+				633895FD27E9E77D007D339F /* Frameworks */,
+				633895FE27E9E77D007D339F /* Resources */,
+				A2A22AAF3FE8B8655480042F /* [CP] Embed Pods Frameworks */,
+				632DA21927E9EF8D00902DE4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCoreVideoCalls;
+			productName = GCoreVideoCalls;
+			productReference = 6338960027E9E77D007D339F /* GCoreVideoCalls.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		633895F827E9E77D007D339F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					633895FF27E9E77D007D339F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 633895FB27E9E77D007D339F /* Build configuration list for PBXProject "GCoreVideoCalls" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+				de,
+			);
+			mainGroup = 633895F727E9E77D007D339F;
+			productRefGroup = 6338960127E9E77D007D339F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				633895FF27E9E77D007D339F /* GCoreVideoCalls */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		633895FE27E9E77D007D339F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634226E127ECB30900B8672E /* Montserrat_Regular.ttf in Resources */,
+				6338961027E9E77F007D339F /* LaunchScreen.storyboard in Resources */,
+				634226D527ECA2EB00B8672E /* Montserrat_Medium.ttf in Resources */,
+				6338960D27E9E77F007D339F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2A22AAF3FE8B8655480042F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD7BC36838B2C4AB0E417E75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GCoreVideoCalls-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		633895FC27E9E77D007D339F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634226D127EC794F00B8672E /* Extensions.swift in Sources */,
+				63D5AFEB27F1D34C007A5CBC /* GCSwitch.swift in Sources */,
+				635DECF3280DACBC003E349D /* GCLocalVideoView.swift in Sources */,
+				631C5E85281B677300252522 /* GCWaitingView.swift in Sources */,
+				6308999527F582E40023F1D8 /* GCVideoCallViewController.swift in Sources */,
+				634226CF27EC47EF00B8672E /* GCVideoCallCollectionCell.swift in Sources */,
+				6306651B28180BE000BA8164 /* GCTitleViewController.swift in Sources */,
+				634226E527EDFF1B00B8672E /* GCoreTextField.swift in Sources */,
+				63251D1227FF20290060A484 /* GCBaseViewController.swift in Sources */,
+				634226E327ECBE9700B8672E /* GCoreButton.swift in Sources */,
+				6338960827E9E77D007D339F /* GCStartViewController.swift in Sources */,
+				6338960427E9E77D007D339F /* AppDelegate.swift in Sources */,
+				6308999227F34C5B0023F1D8 /* SessionCaptureWrapper.swift in Sources */,
+				6308999727F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift in Sources */,
+				632960442812E24F00324DB5 /* GCTableViewCell.swift in Sources */,
+				631C5E83281AC08E00252522 /* AlertFabric.swift in Sources */,
+				63B97EBD27FD8BC600638D94 /* GCSharedLinksStackView.swift in Sources */,
+				63E1C69128144E30004192F0 /* GCModeratorControlView.swift in Sources */,
+				63297A1927E9EC05007C5749 /* VideoCallWrapper.swift in Sources */,
+				6306652C28183D4000BA8164 /* ModeratorMethods.swift in Sources */,
+				63D5AFED27F1E209007A5CBC /* GCSwitchsLabel.swift in Sources */,
+				6305997A281022EC006780A9 /* GCModeratorViewController.swift in Sources */,
+				636FF45A28218F8D0053C7D1 /* RoomInitialStateSetter.swift in Sources */,
+				63D5AFF027F1EBD2007A5CBC /* GCCameraPreview.swift in Sources */,
+				63D5AFE927F1BD33007A5CBC /* GCPreviewViewController.swift in Sources */,
+				636D765B27FB48F600F7C131 /* GCEndScreenViewController.swift in Sources */,
+				630665222818302200BA8164 /* GCVideoCallControlButtonsView.swift in Sources */,
+				6306651D2818282C00BA8164 /* GCCameraPositionButton.swift in Sources */,
+				6306652028182EE900BA8164 /* GCVideoCallBlurView.swift in Sources */,
+				6308999B27F6312C0023F1D8 /* GCModel.swift in Sources */,
+				630665242818355800BA8164 /* GCVideoCallCollectionView.swift in Sources */,
+				63251D1627FF343D0060A484 /* GCVideoCallButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6338960E27E9E77F007D339F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6338960F27E9E77F007D339F /* Base */,
+				634226DE27ECA59300B8672E /* fr */,
+				634226DF27ECA5CF00B8672E /* de */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6338961227E9E77F007D339F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6338961327E9E77F007D339F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6338961527E9E77F007D339F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEF0681E24F37A11D347752B /* Pods-GCoreVideoCalls.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H667QRM4K6;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GCoreVideoCalls/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera usage";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone usage";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iosvideocallsdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
+		6338961627E9E77F007D339F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B9B4D3CB9F1E5CF1C20FB2 /* Pods-GCoreVideoCalls.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H667QRM4K6;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GCoreVideoCalls/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera usage";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone usage";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iosvideocallsdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		633895FB27E9E77D007D339F /* Build configuration list for PBXProject "GCoreVideoCalls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6338961227E9E77F007D339F /* Debug */,
+				6338961327E9E77F007D339F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6338961427E9E77F007D339F /* Build configuration list for PBXNativeTarget "GCoreVideoCalls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6338961527E9E77F007D339F /* Debug */,
+				6338961627E9E77F007D339F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 633895F827E9E77D007D339F /* Project object */;
+}
