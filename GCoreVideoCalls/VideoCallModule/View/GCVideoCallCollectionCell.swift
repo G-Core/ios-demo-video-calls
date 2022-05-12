@@ -25,8 +25,13 @@ final class GCVideoCallCollectionCell: UICollectionViewCell {
     
     var hasCamera: Bool = false {
         didSet {
-            hasCamera == true ? (rtcView?.isHidden = false) : (rtcView?.isHidden = true)
-            hasCamera == true ? (cameraImageView.image = .camera) : (cameraImageView.image = .cameraMute)
+            if hasCamera {
+                disabledCameraUIImage.isHidden = true
+                cameraImageView.image = .camera
+            } else {
+                disabledCameraUIImage.isHidden = false
+                cameraImageView.image = .cameraMute
+            }
         }
     }
     
