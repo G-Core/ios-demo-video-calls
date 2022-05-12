@@ -306,8 +306,8 @@ extension GCVideoCallViewController {
             bottomButtons.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
             bottomButtons.heightAnchor.constraint(equalToConstant: 70),
             
-            localVideoView.widthAnchor.constraint(equalToConstant: ScreenSize.width/4),
-            localVideoView.heightAnchor.constraint(equalTo: localVideoView.widthAnchor, multiplier: 16/9),
+            localVideoView.widthAnchor.constraint(equalToConstant: ScreenSize.width/3.5),
+            localVideoView.heightAnchor.constraint(equalTo: localVideoView.widthAnchor, multiplier: 4/3),
             localVideoView.leftAnchor.constraint(equalTo: collectionView.leftAnchor),
             localVideoView.bottomAnchor.constraint(equalTo: bottomButtons.topAnchor, constant: -10)
         ])
