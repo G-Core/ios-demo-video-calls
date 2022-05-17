@@ -260,6 +260,9 @@ public enum MediaError : Swift.Error {
     get
   }
 }
+public protocol MediaCapturerBufferDelegate : AnyObject {
+  func mediaCapturerDidBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer)
+}
 public enum CloseCode : Swift.UInt16 {
   case normal
   case goingAway
@@ -772,6 +775,7 @@ public protocol CompressionHandler {
 }
 final public class GCoreRoomClient {
   public init(roomOptions: GCoreVideoCallsSDK.RoomOptions, requestParameters: GCoreVideoCallsSDK.MeetRoomParametrs, roomListener: GCoreVideoCallsSDK.RoomListener?)
+  final public func setBufferDelegate(_ delegate: GCoreVideoCallsSDK.MediaCapturerBufferDelegate)
   final public func toggleAudio(isOn: Swift.Bool)
   final public func toggleVideo(isOn: Swift.Bool)
   final public func toggleCameraPosition(completion: ((Swift.Error?) -> Swift.Void)?)

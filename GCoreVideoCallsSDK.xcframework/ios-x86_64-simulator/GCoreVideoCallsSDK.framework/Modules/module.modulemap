@@ -6,6 +6,6 @@ module GCoreVideoCallsSDK {
 }
 
 module GCoreVideoCallsSDK.Swift {
-    header "Headers/GCoreVideoCallsSDK-Swift.h"
+    header "Headers/GCoreVideoCallsSDK.h"
     requires objc
 }
