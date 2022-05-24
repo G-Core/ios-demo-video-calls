@@ -130,6 +130,7 @@ extension GCVideoCallViewController: VideoCallWrapperDelegate {
     
     func initialPermissions(tracks: [MediaTrackKind : Bool]) {
         RoomInitialStateSetter.initialPermissions(tracks, for: model, and: bottomButtons)
+        moderatorVC.updateState()
     }
     
     func togglePermissions(track: MediaTrackKind, isEnabled: Bool) {
@@ -161,6 +162,8 @@ extension GCVideoCallViewController: VideoCallWrapperDelegate {
         case .share: model.roomSettings.shareIsEnable = isEnabled
         case .audio: model.roomSettings.audioIsEnable = isEnabled
         }
+        
+        moderatorVC.updateState()
     }
     
     func requestByModerator(_ mediaKind: MediaTrackKind) {
@@ -276,6 +279,7 @@ extension GCVideoCallViewController: VideoCallWrapperDelegate {
         
         if model.userSettings.isModerator {
             addModeratorMode()
+            moderatorVC.updateState()
         }
     }
     

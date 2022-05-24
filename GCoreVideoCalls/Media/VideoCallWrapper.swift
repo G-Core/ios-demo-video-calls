@@ -30,6 +30,9 @@ struct RemoteVideoItem {
 protocol RoomModerator: AnyObject {
     func userJoinInWaitingRoom(_ user: User)
     func requestToModerator(_ mediaKind: MediaTrackKind, from user: User)
+    func otherModeratorRejectPermission(media: MediaTrackKind, peerId: String)
+    func otherModeratorRejectJoin(peerId: String)
+    func waitingRoom(isActive: Bool)
 }
 
 protocol VideoCallWrapperDelegate: AnyObject {
@@ -55,7 +58,6 @@ protocol VideoCallWrapperDelegate: AnyObject {
     func didAddVideoTrack(_ videoObject: VideoObject)
     func videoChangeFor(_ peerId: String, isClose: Bool)
     func audioChangeFor(_ peerId: String, isClose: Bool)
-    
     
     // other
     func initialPermissions(tracks: [MediaTrackKind: Bool])
@@ -170,7 +172,7 @@ extension VideoCallWrapper {
         delegate?.connectionProccess(state: .waitingForModeratorJoinAccept)
     }
     
-    func roomClientModeratorRejectedJoinRequest() {
+    func roomClientModeratorRejectedLocalJoinRequest() {
         delegate?.connectionProccess(state: .moderatorRejectedJoinRequest)
     }
 }
@@ -201,6 +203,19 @@ extension VideoCallWrapper {
     func roomClient(roomClient: GCoreRoomClient, moderatorIsAskedToJoin: ModeratorIsAskedToJoin) {
         let user = User(id: moderatorIsAskedToJoin.peerId, name: moderatorIsAskedToJoin.userName)
         moderator?.userJoinInWaitingRoom(user)
+    }
+    
+    func roomClientModeratorRejectedRemoteJoinRequest(peerId: String) {
+        moderator?.otherModeratorRejectJoin(peerId: peerId)
+    }
+    
+    func roomClient(roomClient: GCoreRoomClient, waitingRoomIsActive: Bool) {
+        moderator?.waitingRoom(isActive: waitingRoomIsActive)
+    }
+    
+    func roomClient(_ roomClient: GCoreRoomClient, moderatorRejectedPermission type: String, to peerId: String) {
+        guard let media = MediaTrackKind(rawValue: type) else { return }
+        moderator?.otherModeratorRejectPermission(media: media, peerId: peerId)
     }
 }
 
@@ -242,14 +257,41 @@ extension VideoCallWrapper {
 
 //MARK: - RoomListener Other
 extension VideoCallWrapper {
-    func roomClient(roomClient: GCoreRoomClient, joinPermissions: JoinPermissionsObject) {
+    
+    func roomClient(roomClient: GCoreRoomClient,
+                    joinPermissions: JoinPermissionsObject,
+                    joinRequestList: [ModeratorIsAskedToJoin],
+                    joinDisabledList: [PeerDisabledList]) {
         let permissions: [MediaTrackKind: Bool] = [
             .audio : joinPermissions.audio,
             .video : joinPermissions.video,
             .share : joinPermissions.share
         ]
         
+        let waitingUsers: [User] = {
+            var arr: [User] = []
+            joinRequestList.forEach {
+                arr += [User(id: $0.peerId, name: $0.userName)]
+            }
+            
+            return arr
+        }()
+        
+        let requetstUsers: [(mediaKind: MediaTrackKind, user: User)] = {
+            var arr: [(mediaKind: MediaTrackKind, user: User)] = []
+            for list in joinDisabledList {
+                for (key, value) in list.disabledList {
+                    guard value == "requested", let media = MediaTrackKind(rawValue: key) else { continue }
+                    arr += [( media, User(id: list.peerId, name: list.peerName) )]
+                }
+            }
+            
+            return arr
+        }()
+        
         delegate?.initialPermissions(tracks: permissions)
+        waitingUsers.forEach({ moderator?.userJoinInWaitingRoom($0) })
+        requetstUsers.forEach({ moderator?.requestToModerator($0.mediaKind, from: $0.user) })
     }
     
     func roomClient(roomClient: GCoreRoomClient, updateMeInfo: UpdateMeInfoObject) {

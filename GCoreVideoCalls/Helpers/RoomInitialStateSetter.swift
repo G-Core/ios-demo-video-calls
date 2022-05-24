@@ -38,5 +38,6 @@ struct RoomInitialStateSetter {
         
         model.localVideoItem = item
         model.userSettings.isModerator = info.role == "moderator"
+        model.roomSettings.waitingRoomIsEnable = info.waitingRoom
     }
 }

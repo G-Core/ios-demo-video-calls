@@ -228,7 +228,7 @@ public protocol RoomListener {
   func roomClientReconnecting()
   func roomClientReconnectingFailed()
   func roomClientSocketDidDisconnected(roomClient: GCoreVideoCallsSDK.GCoreRoomClient)
-  func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, joinPermissions: GCoreVideoCallsSDK.JoinPermissionsObject)
+  func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, joinPermissions: GCoreVideoCallsSDK.JoinPermissionsObject, joinRequestList: [GCoreVideoCallsSDK.ModeratorIsAskedToJoin], joinDisabledList: [GCoreVideoCallsSDK.PeerDisabledList])
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, joinWithPeersInRoom peers: [GCoreVideoCallsSDK.PeerObject])
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, handlePeer: GCoreVideoCallsSDK.PeerObject)
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, peerClosed: Swift.String)
@@ -245,12 +245,15 @@ public protocol RoomListener {
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, acceptedPermissionFromModerator fromModerator: Swift.Bool, peer: GCoreVideoCallsSDK.PeerObject, requestType: Swift.String)
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, disableProducerByModerator kind: Swift.String)
   func roomClientWaitingForModeratorJoinAccept()
-  func roomClientModeratorRejectedJoinRequest()
+  func roomClientModeratorRejectedRemoteJoinRequest(peerId: Swift.String)
+  func roomClientModeratorRejectedLocalJoinRequest()
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, moderatorIsAskedToJoin: GCoreVideoCallsSDK.ModeratorIsAskedToJoin)
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, updateMeInfo: GCoreVideoCallsSDK.UpdateMeInfoObject)
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, requestToModerator: GCoreVideoCallsSDK.RequestToModerator)
   func roomClientRemovedByModerator()
   func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, captureSession: AVFoundation.AVCaptureSession, captureDevice: AVFoundation.AVCaptureDevice)
+  func roomClient(roomClient: GCoreVideoCallsSDK.GCoreRoomClient, waitingRoomIsActive: Swift.Bool)
+  func roomClient(_ roomClient: GCoreVideoCallsSDK.GCoreRoomClient, moderatorRejectedPermission type: Swift.String, to peerId: Swift.String)
 }
 public enum MediaError : Swift.Error {
   case CAMERA_DEVICE_NOT_FOUND
@@ -780,6 +783,9 @@ final public class GCoreRoomClient {
   final public func toggleVideo(isOn: Swift.Bool)
   final public func toggleCameraPosition(completion: ((Swift.Error?) -> Swift.Void)?)
   final public func askModeratorToEnableTrack(kind: Swift.String)
+  final public func togglePermission(kind: Swift.String, isActive: Swift.Bool)
+  final public func toggleWaitingRoom(currentWaitingRoomStatus: Swift.Bool)
+  final public func disableAllMedia(kind: Swift.String)
   final public func acceptedPermissionByModerator(peerId: Swift.String, kind: Swift.String)
   final public func rejectPermissionByModerator(peerId: Swift.String, kind: Swift.String)
   final public func disableTrackProducerByModerator(peerId: Swift.String, kind: Swift.String)
@@ -796,6 +802,11 @@ final public class GCoreRoomClient {
   public func createResponse(headers: [Swift.String : Swift.String]) -> Foundation.Data
   public func parse(data: Foundation.Data)
   @objc deinit
+}
+public struct PeerDisabledList {
+  public let peerId: Swift.String
+  public let peerName: Swift.String
+  public let disabledList: [Swift.String : Swift.String]
 }
 @objc @_inheritsConvenienceInitializers @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
 public class NativeEngine : ObjectiveC.NSObject, GCoreVideoCallsSDK.Engine, Foundation.URLSessionDataDelegate, Foundation.URLSessionWebSocketDelegate {

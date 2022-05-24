@@ -39,6 +39,7 @@
 		635DECF3280DACBC003E349D /* GCLocalVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635DECF2280DACBC003E349D /* GCLocalVideoView.swift */; };
 		636D765B27FB48F600F7C131 /* GCEndScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D765A27FB48F600F7C131 /* GCEndScreenViewController.swift */; };
 		636FF45A28218F8D0053C7D1 /* RoomInitialStateSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF45928218F8D0053C7D1 /* RoomInitialStateSetter.swift */; };
+		63A0B48F283CE6C3003A5440 /* GCModeratorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B48E283CE6C3003A5440 /* GCModeratorButton.swift */; };
 		63B97EBD27FD8BC600638D94 /* GCSharedLinksStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B97EBC27FD8BC600638D94 /* GCSharedLinksStackView.swift */; };
 		63D5AFE927F1BD33007A5CBC /* GCPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFE827F1BD33007A5CBC /* GCPreviewViewController.swift */; };
 		63D5AFEB27F1D34C007A5CBC /* GCSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFEA27F1D34C007A5CBC /* GCSwitch.swift */; };
@@ -98,6 +99,7 @@
 		635DECF2280DACBC003E349D /* GCLocalVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCLocalVideoView.swift; sourceTree = "<group>"; };
 		636D765A27FB48F600F7C131 /* GCEndScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCEndScreenViewController.swift; sourceTree = "<group>"; };
 		636FF45928218F8D0053C7D1 /* RoomInitialStateSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInitialStateSetter.swift; sourceTree = "<group>"; };
+		63A0B48E283CE6C3003A5440 /* GCModeratorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCModeratorButton.swift; sourceTree = "<group>"; };
 		63B97EBC27FD8BC600638D94 /* GCSharedLinksStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSharedLinksStackView.swift; sourceTree = "<group>"; };
 		63D5AFE827F1BD33007A5CBC /* GCPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPreviewViewController.swift; sourceTree = "<group>"; };
 		63D5AFEA27F1D34C007A5CBC /* GCSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSwitch.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				63E1C69028144E30004192F0 /* GCModeratorControlView.swift */,
+				63A0B48E283CE6C3003A5440 /* GCModeratorButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				636FF45A28218F8D0053C7D1 /* RoomInitialStateSetter.swift in Sources */,
 				63D5AFF027F1EBD2007A5CBC /* GCCameraPreview.swift in Sources */,
 				63D5AFE927F1BD33007A5CBC /* GCPreviewViewController.swift in Sources */,
+				63A0B48F283CE6C3003A5440 /* GCModeratorButton.swift in Sources */,
 				636D765B27FB48F600F7C131 /* GCEndScreenViewController.swift in Sources */,
 				630665222818302200BA8164 /* GCVideoCallControlButtonsView.swift in Sources */,
 				6306651D2818282C00BA8164 /* GCCameraPositionButton.swift in Sources */,
@@ -619,7 +623,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iosvideocallsdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -655,7 +659,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iosvideocallsdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

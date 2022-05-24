@@ -15,20 +15,37 @@ final class GCModeratorViewController: GCBaseViewController {
     
     private let model = GCModel.shared
     private let cellId = "Cell"
-    private let buttonsData = [ "Turn off all microphones", "Turn off all cameras" ]
     
+    private let buttonsData: [[String]] = [
+        ["Waiting Room is activated", "Waiting Room is deactivated"],
+        ["Webcams are allowed", "Webcams are disallowed"],
+        ["Mics are allowed", "Mics are disallowed"],
+        ["Sharing is allowed", "Sharing is disallowed"],
+        ["Turn off all microphones"],
+        ["Turn off all cameras"],
+    ]
+
     private let turnOffButtonsStack: UIStackView = {
-        let button: () -> GCoreButton = {
-            let font = UIFont.montserratMedium(size: 14)
-            let button = GCoreButton(font: font, image: nil)
-            button.addTarget(self, action: #selector(tapOffButton(_:)), for: .touchUpInside)
+        let button: (GCModeratorButton.ButtonType) -> GCModeratorButton = { type in
+            let button = GCModeratorButton(type: type)
+            button.addTarget(self, action: #selector(tapModeratorsButton(_:)), for: .touchUpInside)
             return button
         }
         
-        let stack = UIStackView(arrangedSubviews:  [button(), button()] )
+        let buttons = [
+            button(.toggleWaitingRoom),
+            button(.toggleCamsPermission),
+            button(.toggleMicsPermission),
+            button(.toggleSharingPermission),
+            button(.turnOffAllMics),
+            button(.turnOffAllCams)
+        ]
+        
+        let stack = UIStackView(arrangedSubviews: buttons)
         stack.axis = .vertical
         stack.spacing = 5
         stack.translatesAutoresizingMaskIntoConstraints = false
+        
         return stack
     }()
     
@@ -41,7 +58,7 @@ final class GCModeratorViewController: GCBaseViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.layer.borderColor = UIColor.black.cgColor
         table.layer.borderWidth = 1.5
-        
+    
         return table
     }()
     
@@ -55,7 +72,7 @@ final class GCModeratorViewController: GCBaseViewController {
         
         if let buttons = turnOffButtonsStack.arrangedSubviews as? [GCoreButton] {
             for i in buttons.indices {
-                buttons[i].setTitle(buttonsData[i], for: .normal)
+                buttons[i].setTitle(buttonsData[i][0], for: .normal)
             }
         }
     }
@@ -90,16 +107,57 @@ final class GCModeratorViewController: GCBaseViewController {
         }
     }
     
-    @objc private func tapOffButton(_ button: GCoreButton) {
-        let text = button.titleLabel?.text
-        let trackKind: Kind = (text == buttonsData[0]) ? .audio : .video
+    @objc private func tapModeratorsButton(_ button: GCModeratorButton) {
+        switch button.type {
+        case .toggleWaitingRoom:
+            button.tag == 0 ? (button.tag = 1) : (button.tag = 0)
+            button.setTitle(buttonsData[button.type.rawValue][button.tag], for: .normal)
+            roomClient?.toggleWaitingRoom(currentWaitingRoomStatus: model.roomSettings.waitingRoomIsEnable)
+            
+        case .toggleCamsPermission :
+            button.tag == 0 ? (button.tag = 1) : (button.tag = 0)
+            button.setTitle(buttonsData[button.type.rawValue][button.tag], for: .normal)
+            model.roomSettings.videoIsEnable = !model.roomSettings.videoIsEnable
+            roomClient?.togglePermission(kind: MediaTrackKind.video.rawValue, isActive: model.roomSettings.videoIsEnable)
+            
+        case .toggleMicsPermission :
+            button.tag == 0 ? (button.tag = 1) : (button.tag = 0)
+            button.setTitle(buttonsData[button.type.rawValue][button.tag], for: .normal)
+            model.roomSettings.audioIsEnable = !model.roomSettings.audioIsEnable
+            roomClient?.togglePermission(kind: MediaTrackKind.audio.rawValue, isActive: model.roomSettings.audioIsEnable)
+            
+        case .toggleSharingPermission :
+            button.tag == 0 ? (button.tag = 1) : (button.tag = 0)
+            button.setTitle(buttonsData[button.type.rawValue][button.tag], for: .normal)
+            model.roomSettings.shareIsEnable = !model.roomSettings.shareIsEnable
+            roomClient?.togglePermission(kind: MediaTrackKind.share.rawValue, isActive: model.roomSettings.shareIsEnable)
+            
+        case .turnOffAllCams : roomClient?.disableAllMedia(kind: MediaTrackKind.video.rawValue)
+        case .turnOffAllMics : roomClient?.disableAllMedia(kind: MediaTrackKind.audio.rawValue)
+        }
+    }
+    
+    func updateState() {
+        waitingRoom(isActive: model.roomSettings.waitingRoomIsEnable)
         
-        for item in model.remoteVideoItems {
-            roomClient?.disableTrackProducerByModerator(peerId: item.userData.id, kind: trackKind.rawValue)
+        for button in turnOffButtonsStack.arrangedSubviews {
+            guard let button = button as? GCModeratorButton else { continue }
+            let tag: Int
+            
+            switch button.type {
+            case .toggleCamsPermission: model.roomSettings.videoIsEnable ? (tag = 0) : (tag = 1)
+            case .toggleMicsPermission: model.roomSettings.audioIsEnable ? (tag = 0) : (tag = 1)
+            case .toggleSharingPermission: model.roomSettings.shareIsEnable ? (tag = 0) : (tag = 1)
+            default: continue
+        }
+            
+            button.tag = tag
+            button.setTitle(buttonsData[button.type.rawValue][button.tag], for: .normal)
         }
     }
 }
 
+//MARK: - Layout
 extension GCModeratorViewController {
     private func initConstraints() {
         view.addSubview(turnOffButtonsStack)
@@ -118,7 +176,7 @@ extension GCModeratorViewController {
     }
 }
 
-
+//MARK: - UITableViewDelegate, UITableViewDataSource
 extension GCModeratorViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = .clear
@@ -185,6 +243,7 @@ extension GCModeratorViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
+//MARK: - GCModeratorControlViewDelegate
 extension GCModeratorViewController: GCModeratorControlViewDelegate {
     private typealias Kind = MediaTrackKind
     
@@ -205,8 +264,26 @@ extension GCModeratorViewController: GCModeratorControlViewDelegate {
     }
 }
 
-
+//MARK: - RoomModerator
 extension GCModeratorViewController: RoomModerator {
+    func otherModeratorRejectPermission(media: MediaTrackKind, peerId: String) {
+        model.moderatorRoom.requestsUsers.removeAll(where: { $0.media == media && $0.user.id == peerId })
+        moderatorTableView.reloadSections(.init(integer: 1), with: .automatic)
+    }
+    
+    func otherModeratorRejectJoin(peerId: String) {
+        model.moderatorRoom.waitingUsers.removeAll(where: { $0.id == peerId })
+        moderatorTableView.reloadSections(.init(integer: 0), with: .automatic)
+    }
+    
+    func waitingRoom(isActive: Bool) {
+        model.roomSettings.waitingRoomIsEnable = isActive
+        let typeRawValue = GCModeratorButton.ButtonType.toggleWaitingRoom.rawValue
+        let button = turnOffButtonsStack.arrangedSubviews[typeRawValue] as! GCModeratorButton
+        isActive ? (button.tag = 0) : (button.tag = 1)
+        button.setTitle(buttonsData[typeRawValue][button.tag], for: .normal)
+    }
+    
     func userJoinInWaitingRoom(_ user: User) {
         model.moderatorRoom.waitingUsers += [user]
         moderatorTableView.reloadSections(.init(integer: 0), with: .automatic)
