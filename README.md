@@ -43,8 +43,6 @@ Copyright 2022 G-Core Labs Licensed under the Apache License, Version 2.0 (the "
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-![IMAGE 2022-05-24 17:25:29]()
-
 
 # Screenshots
 
