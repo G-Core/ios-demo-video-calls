@@ -369,14 +369,14 @@ peer - a new user in the room
 
 If you need to additionally process the video stream, then set a delegate for MediaCapturer, the delegate will receive a CVPixelBuffer before sending it to the server like this:
 
-    ```swift
+```swift
     extension ViewController: MediaCapturerBufferDelegate {
         func mediaCapturerDidBuffer(_ pixelBuffer: CVPixelBuffer) {
             let ciimage = CIImage(cvPixelBuffer: pixelBuffer).applyingGaussianBlur(sigma: 15)
             CIContext().render(ciimage, to: pixelBuffer)
         }
     }
-    ```
+```
 
 ## Types of errors
 
