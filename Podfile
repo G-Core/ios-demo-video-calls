@@ -1,10 +1,13 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '12.1'
 
-target 'GCoreVideoCalls' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-	pod "mediasoup_ios_client", '1.5.3'
-  # Pods for GCoreVideoCalls
+source ‘https://github.com/G-Core/ios-video-calls-SDK.git’
+source 'https://github.com/CocoaPods/Specs'
+
+target 'GcoreVideoCalls' do
+
+   use_frameworks!
+   pod 'GCoreVideoCallsSDK', '2.6.0'
+   pod "mediasoup_ios_client", '1.5.3'
+   pod 'AdvancedPageControl'
 
 end
