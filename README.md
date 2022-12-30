@@ -48,8 +48,4 @@ Copyright 2022 G-Core Labs Licensed under the Apache License, Version 2.0 (the "
 
 # Screenshots
 
- <img src="https://user-images.githubusercontent.com/78258561/168118034-ac64704c-e456-4d41-a0c8-1bdb7d6f4145.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/168118164-e39a3c4c-c436-4e56-b1cf-797ecb83b5ff.jpg" width="200">   <img src="https://user-images.githubusercontent.com/78258561/168118274-c6b9e88c-829f-4932-871c-b4ef5385c04c.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/168118299-9af905a4-c795-4232-94b7-a38337ea4de3.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/168118821-7823f032-578e-4d32-9c3f-2f6237d99455.jpg" width="200"> 
-  <img src="https://user-images.githubusercontent.com/78258561/168118841-efd2671d-a2d5-497f-84a4-2887399eccb2.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/168119127-317c2c37-b894-4529-860e-02767faeb84d.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/170059534-8258e365-3bb4-4ed8-a40b-b2264c838d07.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/168119300-84b8c14d-3b0c-4319-b6a0-e19fd2d05e10.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/168119316-c7f1b3ad-6705-4001-949e-97a18cfc5932.jpg" width="200">
-
-
-
+ <img src="https://github.com/G-Core/ios-demo-video-calls/blob/v2.0.0/Screenshots/1.jpg?raw=true" width="200"> <img src="https://github.com/G-Core/ios-demo-video-calls/blob/v2.0.0/Screenshots/2.jpg?raw=true" width="200">   <img src="https://github.com/G-Core/ios-demo-video-calls/blob/v2.0.0/Screenshots/3.jpg?raw=true" width="200"> <img src="https://github.com/G-Core/ios-demo-video-calls/blob/v2.0.0/Screenshots/4.jpg?raw=true" width="200"> <img src="https://github.com/G-Core/ios-demo-video-calls/blob/v2.0.0/Screenshots/5.jpg?raw=true" width="200">
