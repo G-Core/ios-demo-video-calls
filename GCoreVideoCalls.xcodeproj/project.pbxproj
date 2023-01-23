@@ -7,304 +7,372 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6305997A281022EC006780A9 /* GCModeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63059979281022EC006780A9 /* GCModeratorViewController.swift */; };
-		6306651B28180BE000BA8164 /* GCTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306651A28180BE000BA8164 /* GCTitleViewController.swift */; };
-		6306651D2818282C00BA8164 /* GCCameraPositionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306651C2818282C00BA8164 /* GCCameraPositionButton.swift */; };
-		6306652028182EE900BA8164 /* GCVideoCallBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306651F28182EE900BA8164 /* GCVideoCallBlurView.swift */; };
-		630665222818302200BA8164 /* GCVideoCallControlButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630665212818302200BA8164 /* GCVideoCallControlButtonsView.swift */; };
-		630665242818355800BA8164 /* GCVideoCallCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630665232818355800BA8164 /* GCVideoCallCollectionView.swift */; };
-		6306652C28183D4000BA8164 /* ModeratorMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306652B28183D4000BA8164 /* ModeratorMethods.swift */; };
-		6308999227F34C5B0023F1D8 /* SessionCaptureWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308999127F34C5B0023F1D8 /* SessionCaptureWrapper.swift */; };
-		6308999527F582E40023F1D8 /* GCVideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308999427F582E40023F1D8 /* GCVideoCallViewController.swift */; };
-		6308999727F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308999627F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift */; };
-		6308999B27F6312C0023F1D8 /* GCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308999A27F6312C0023F1D8 /* GCModel.swift */; };
-		631C5E83281AC08E00252522 /* AlertFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C5E82281AC08E00252522 /* AlertFabric.swift */; };
-		631C5E85281B677300252522 /* GCWaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C5E84281B677300252522 /* GCWaitingView.swift */; };
-		63251D1227FF20290060A484 /* GCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63251D1127FF20290060A484 /* GCBaseViewController.swift */; };
-		63251D1627FF343D0060A484 /* GCVideoCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63251D1527FF343D0060A484 /* GCVideoCallButton.swift */; };
-		632960442812E24F00324DB5 /* GCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632960432812E24F00324DB5 /* GCTableViewCell.swift */; };
-		63297A1927E9EC05007C5749 /* VideoCallWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63297A1827E9EC05007C5749 /* VideoCallWrapper.swift */; };
-		632DA21727E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632DA21627E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework */; };
-		632DA21827E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 632DA21627E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6338960427E9E77D007D339F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338960327E9E77D007D339F /* AppDelegate.swift */; };
-		6338960827E9E77D007D339F /* GCStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338960727E9E77D007D339F /* GCStartViewController.swift */; };
-		6338960D27E9E77F007D339F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6338960C27E9E77F007D339F /* Assets.xcassets */; };
-		6338961027E9E77F007D339F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6338960E27E9E77F007D339F /* LaunchScreen.storyboard */; };
-		634226CF27EC47EF00B8672E /* GCVideoCallCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634226CE27EC47EF00B8672E /* GCVideoCallCollectionCell.swift */; };
-		634226D127EC794F00B8672E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634226D027EC794F00B8672E /* Extensions.swift */; };
-		634226D527ECA2EB00B8672E /* Montserrat_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 634226D427ECA2EA00B8672E /* Montserrat_Medium.ttf */; };
-		634226E127ECB30900B8672E /* Montserrat_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 634226E027ECB30900B8672E /* Montserrat_Regular.ttf */; };
-		634226E327ECBE9700B8672E /* GCoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634226E227ECBE9700B8672E /* GCoreButton.swift */; };
-		634226E527EDFF1B00B8672E /* GCoreTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634226E427EDFF1B00B8672E /* GCoreTextField.swift */; };
-		635DECF3280DACBC003E349D /* GCLocalVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635DECF2280DACBC003E349D /* GCLocalVideoView.swift */; };
-		636D765B27FB48F600F7C131 /* GCEndScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D765A27FB48F600F7C131 /* GCEndScreenViewController.swift */; };
-		636FF45A28218F8D0053C7D1 /* RoomInitialStateSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF45928218F8D0053C7D1 /* RoomInitialStateSetter.swift */; };
-		63A0B48F283CE6C3003A5440 /* GCModeratorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B48E283CE6C3003A5440 /* GCModeratorButton.swift */; };
-		63B97EBD27FD8BC600638D94 /* GCSharedLinksStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B97EBC27FD8BC600638D94 /* GCSharedLinksStackView.swift */; };
-		63D5AFE927F1BD33007A5CBC /* GCPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFE827F1BD33007A5CBC /* GCPreviewViewController.swift */; };
-		63D5AFEB27F1D34C007A5CBC /* GCSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFEA27F1D34C007A5CBC /* GCSwitch.swift */; };
-		63D5AFED27F1E209007A5CBC /* GCSwitchsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFEC27F1E209007A5CBC /* GCSwitchsLabel.swift */; };
-		63D5AFF027F1EBD2007A5CBC /* GCCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5AFEF27F1EBD2007A5CBC /* GCCameraPreview.swift */; };
-		63E1C69128144E30004192F0 /* GCModeratorControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E1C69028144E30004192F0 /* GCModeratorControlView.swift */; };
-		A16538A5C76B0D09C6C1A7F5 /* Pods_GCoreVideoCalls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7662F442DE39437D42F2DE2A /* Pods_GCoreVideoCalls.framework */; };
+		201BF17628FD3F5900FA4057 /* SizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BF17528FD3F5900FA4057 /* SizeHelper.swift */; };
+		201BF17D28FD990C00FA4057 /* GcoreVideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BF17C28FD990C00FA4057 /* GcoreVideoPreviewView.swift */; };
+		201CEDD629194B9B0040DF15 /* CollectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CEDD529194B9B0040DF15 /* CollectionFooter.swift */; };
+		202B73EA290BDEAD00D2FA9F /* RoomMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B73E9290BDEAD00D2FA9F /* RoomMainView.swift */; };
+		202B73EC290BE95200D2FA9F /* VideoCallWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B73EB290BE95200D2FA9F /* VideoCallWrapper.swift */; };
+		202B73EE290C001700D2FA9F /* RemoteUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B73ED290C001700D2FA9F /* RemoteUser.swift */; };
+		205E764E290674D4002B151F /* PinnedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E764D290674D4002B151F /* PinnedUserView.swift */; };
+		205E76532906EC48002B151F /* LetterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E76522906EC48002B151F /* LetterImageView.swift */; };
+		205E76552907FE5C002B151F /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E76542907FE5C002B151F /* ActivityController.swift */; };
+		206BF23E28FB26AD00B76FC7 /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BF23D28FB26AD00B76FC7 /* HomeScreenCollectionViewCell.swift */; };
+		20845F5E290A9794001EF18E /* AudioDeviceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20845F5D290A9794001EF18E /* AudioDeviceHandler.swift */; };
+		209D48AA28F7547A00051BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D48A928F7547A00051BFF /* AppDelegate.swift */; };
+		209D48AE28F7547A00051BFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D48AD28F7547A00051BFF /* HomeViewController.swift */; };
+		209D48B328F7547B00051BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209D48B228F7547B00051BFF /* Assets.xcassets */; };
+		209D48B628F7547B00051BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209D48B428F7547B00051BFF /* LaunchScreen.storyboard */; };
+		209D48C528F8166E00051BFF /* GcoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D48C428F8166E00051BFF /* GcoreButton.swift */; };
+		209D48C728F845DE00051BFF /* ConnectWithLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D48C628F845DE00051BFF /* ConnectWithLinkViewController.swift */; };
+		209D48CB28F8460300051BFF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D48CA28F8460300051BFF /* BaseViewController.swift */; };
+		209D48CF28F84EFB00051BFF /* GcoreTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D48CE28F84EFB00051BFF /* GcoreTextField.swift */; };
+		209D48E628F865A700051BFF /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D48E328F865A700051BFF /* SFProDisplay-Regular.ttf */; };
+		209D48E728F865A700051BFF /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D48E428F865A700051BFF /* SFProDisplay-Medium.ttf */; };
+		209D48E828F865A700051BFF /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D48E528F865A700051BFF /* SFProDisplay-Semibold.ttf */; };
+		209D490F28F8B5CA00051BFF /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D490E28F8B5CA00051BFF /* PreviewViewController.swift */; };
+		209D491228F9654B00051BFF /* LetterImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D491128F9654B00051BFF /* LetterImageGenerator.swift */; };
+		209D493628F9998B00051BFF /* SessionCaptureWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D493528F9998B00051BFF /* SessionCaptureWrapper.swift */; };
+		20C3F74C28FFE11100CCDC4C /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3F74B28FFE11100CCDC4C /* CreateRoomViewController.swift */; };
+		20C3F74E2900088400CCDC4C /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3F74D2900088400CCDC4C /* RoomViewController.swift */; };
+		20C3F755290034CA00CCDC4C /* VideoUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3F753290034CA00CCDC4C /* VideoUserCollectionViewCell.swift */; };
+		20C3F75B290184AA00CCDC4C /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3F759290184AA00CCDC4C /* UserCollectionViewCell.swift */; };
+		20C579AC2910512E004355EB /* MediaPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C579AB2910512E004355EB /* MediaPermissions.swift */; };
+		20C9E90D29129B330080A4FF /* VideoCallWrapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9E90C29129B330080A4FF /* VideoCallWrapperProtocol.swift */; };
+		20C9E9132912B8E00080A4FF /* RoomConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C9E9122912B8E00080A4FF /* RoomConfigurator.swift */; };
+		20EA0BD22909726800EF14A3 /* GcoreVideoCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA0BD12909726800EF14A3 /* GcoreVideoCallButton.swift */; };
+		20EA0BD4290976F900EF14A3 /* AlertFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA0BD3290976F900EF14A3 /* AlertFabric.swift */; };
+		2DB972723DBA310E0D670E60 /* Pods_GcoreVideoCalls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1F03BD021C390937661DCF /* Pods_GcoreVideoCalls.framework */; };
+		634082B3295E0884001D849F /* PreviewMainView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634082B2295E0884001D849F /* PreviewMainView+Constraints.swift */; };
+		634082BD295E15E5001D849F /* RoomCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634082BC295E15E5001D849F /* RoomCollectionDelegate.swift */; };
+		634082BF295E15F3001D849F /* RoomCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634082BE295E15F3001D849F /* RoomCollectionDataSource.swift */; };
+		634082C1295E278B001D849F /* RoomMainView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634082C0295E278B001D849F /* RoomMainView+Constraints.swift */; };
+		637E7947295CAD4D0058C209 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E7946295CAD4D0058C209 /* Logger.swift */; };
+		637E794A295D1C590058C209 /* String+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E7949295D1C590058C209 /* String+Common.swift */; };
+		637E794C295D1CE40058C209 /* UIImage+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E794B295D1CE40058C209 /* UIImage+Images.swift */; };
+		637E794E295D1D000058C209 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E794D295D1D000058C209 /* UIColor+Colors.swift */; };
+		637E7950295D1D360058C209 /* UIFont+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E794F295D1D360058C209 /* UIFont+Fonts.swift */; };
+		637E7952295D1D500058C209 /* UIStackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E7951295D1D500058C209 /* UIStackView+Init.swift */; };
+		637E7954295D1D700058C209 /* UILabel+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E7953295D1D700058C209 /* UILabel+Init.swift */; };
+		637E7959295D1EC70058C209 /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E7958295D1EC70058C209 /* HomeMainView.swift */; };
+		637E795B295D21010058C209 /* HomeMainView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E795A295D21010058C209 /* HomeMainView+Constraints.swift */; };
+		637E795D295D280F0058C209 /* HomeCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E795C295D280F0058C209 /* HomeCollectionDelegate.swift */; };
+		637E795F295D28230058C209 /* HomeCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E795E295D28230058C209 /* HomeCollectionDataSource.swift */; };
+		637E7963295D2C2F0058C209 /* PreviewMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E7962295D2C2F0058C209 /* PreviewMainView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		632DA21927E9EF8D00902DE4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				632DA21827E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		63059979281022EC006780A9 /* GCModeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCModeratorViewController.swift; sourceTree = "<group>"; };
-		6306651A28180BE000BA8164 /* GCTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCTitleViewController.swift; sourceTree = "<group>"; };
-		6306651C2818282C00BA8164 /* GCCameraPositionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCameraPositionButton.swift; sourceTree = "<group>"; };
-		6306651F28182EE900BA8164 /* GCVideoCallBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallBlurView.swift; sourceTree = "<group>"; };
-		630665212818302200BA8164 /* GCVideoCallControlButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallControlButtonsView.swift; sourceTree = "<group>"; };
-		630665232818355800BA8164 /* GCVideoCallCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallCollectionView.swift; sourceTree = "<group>"; };
-		6306652B28183D4000BA8164 /* ModeratorMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeratorMethods.swift; sourceTree = "<group>"; };
-		6308999127F34C5B0023F1D8 /* SessionCaptureWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCaptureWrapper.swift; sourceTree = "<group>"; };
-		6308999427F582E40023F1D8 /* GCVideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallViewController.swift; sourceTree = "<group>"; };
-		6308999627F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallButtonsStackView.swift; sourceTree = "<group>"; };
-		6308999A27F6312C0023F1D8 /* GCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCModel.swift; sourceTree = "<group>"; };
-		631C5E82281AC08E00252522 /* AlertFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFabric.swift; sourceTree = "<group>"; };
-		631C5E84281B677300252522 /* GCWaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCWaitingView.swift; sourceTree = "<group>"; };
-		63251D1127FF20290060A484 /* GCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCBaseViewController.swift; sourceTree = "<group>"; };
-		63251D1527FF343D0060A484 /* GCVideoCallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallButton.swift; sourceTree = "<group>"; };
-		632960432812E24F00324DB5 /* GCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCTableViewCell.swift; sourceTree = "<group>"; };
-		63297A1827E9EC05007C5749 /* VideoCallWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallWrapper.swift; sourceTree = "<group>"; };
-		632DA21627E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GCoreVideoCallsSDK.xcframework; sourceTree = "<group>"; };
-		6338960027E9E77D007D339F /* GCoreVideoCalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCoreVideoCalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6338960327E9E77D007D339F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6338960727E9E77D007D339F /* GCStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCStartViewController.swift; sourceTree = "<group>"; };
-		6338960C27E9E77F007D339F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6338960F27E9E77F007D339F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6338961127E9E77F007D339F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		634226CE27EC47EF00B8672E /* GCVideoCallCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCVideoCallCollectionCell.swift; sourceTree = "<group>"; };
-		634226D027EC794F00B8672E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		634226D427ECA2EA00B8672E /* Montserrat_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat_Medium.ttf; sourceTree = "<group>"; };
-		634226DE27ECA59300B8672E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		634226DF27ECA5CF00B8672E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		634226E027ECB30900B8672E /* Montserrat_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat_Regular.ttf; sourceTree = "<group>"; };
-		634226E227ECBE9700B8672E /* GCoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCoreButton.swift; sourceTree = "<group>"; };
-		634226E427EDFF1B00B8672E /* GCoreTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCoreTextField.swift; sourceTree = "<group>"; };
-		635DECF2280DACBC003E349D /* GCLocalVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCLocalVideoView.swift; sourceTree = "<group>"; };
-		636D765A27FB48F600F7C131 /* GCEndScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCEndScreenViewController.swift; sourceTree = "<group>"; };
-		636FF45928218F8D0053C7D1 /* RoomInitialStateSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInitialStateSetter.swift; sourceTree = "<group>"; };
-		63A0B48E283CE6C3003A5440 /* GCModeratorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCModeratorButton.swift; sourceTree = "<group>"; };
-		63B97EBC27FD8BC600638D94 /* GCSharedLinksStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSharedLinksStackView.swift; sourceTree = "<group>"; };
-		63D5AFE827F1BD33007A5CBC /* GCPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPreviewViewController.swift; sourceTree = "<group>"; };
-		63D5AFEA27F1D34C007A5CBC /* GCSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSwitch.swift; sourceTree = "<group>"; };
-		63D5AFEC27F1E209007A5CBC /* GCSwitchsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSwitchsLabel.swift; sourceTree = "<group>"; };
-		63D5AFEF27F1EBD2007A5CBC /* GCCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCameraPreview.swift; sourceTree = "<group>"; };
-		63E1C69028144E30004192F0 /* GCModeratorControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCModeratorControlView.swift; sourceTree = "<group>"; };
-		7662F442DE39437D42F2DE2A /* Pods_GCoreVideoCalls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCoreVideoCalls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B9B4D3CB9F1E5CF1C20FB2 /* Pods-GCoreVideoCalls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCoreVideoCalls.release.xcconfig"; path = "Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls.release.xcconfig"; sourceTree = "<group>"; };
-		FEF0681E24F37A11D347752B /* Pods-GCoreVideoCalls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCoreVideoCalls.debug.xcconfig"; path = "Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls.debug.xcconfig"; sourceTree = "<group>"; };
+		201BF17528FD3F5900FA4057 /* SizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeHelper.swift; sourceTree = "<group>"; };
+		201BF17C28FD990C00FA4057 /* GcoreVideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcoreVideoPreviewView.swift; sourceTree = "<group>"; };
+		201CEDD529194B9B0040DF15 /* CollectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFooter.swift; sourceTree = "<group>"; };
+		201CEDD7291972910040DF15 /* GCoreVideoCallsSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GCoreVideoCallsSDK.xcframework; sourceTree = "<group>"; };
+		202B73E9290BDEAD00D2FA9F /* RoomMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMainView.swift; sourceTree = "<group>"; };
+		202B73EB290BE95200D2FA9F /* VideoCallWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallWrapper.swift; sourceTree = "<group>"; };
+		202B73ED290C001700D2FA9F /* RemoteUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUser.swift; sourceTree = "<group>"; };
+		205E764D290674D4002B151F /* PinnedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedUserView.swift; sourceTree = "<group>"; };
+		205E76522906EC48002B151F /* LetterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterImageView.swift; sourceTree = "<group>"; };
+		205E76542907FE5C002B151F /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
+		206BF23D28FB26AD00B76FC7 /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		20845F5D290A9794001EF18E /* AudioDeviceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceHandler.swift; sourceTree = "<group>"; };
+		209D48A628F7547A00051BFF /* GcoreVideoCalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GcoreVideoCalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		209D48A928F7547A00051BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		209D48AD28F7547A00051BFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		209D48B228F7547B00051BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		209D48B528F7547B00051BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		209D48B728F7547B00051BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209D48C428F8166E00051BFF /* GcoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcoreButton.swift; sourceTree = "<group>"; };
+		209D48C628F845DE00051BFF /* ConnectWithLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectWithLinkViewController.swift; sourceTree = "<group>"; };
+		209D48CA28F8460300051BFF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		209D48CE28F84EFB00051BFF /* GcoreTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcoreTextField.swift; sourceTree = "<group>"; };
+		209D48E328F865A700051BFF /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		209D48E428F865A700051BFF /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		209D48E528F865A700051BFF /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		209D490E28F8B5CA00051BFF /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		209D491128F9654B00051BFF /* LetterImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterImageGenerator.swift; sourceTree = "<group>"; };
+		209D493528F9998B00051BFF /* SessionCaptureWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCaptureWrapper.swift; sourceTree = "<group>"; };
+		20C3F74B28FFE11100CCDC4C /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
+		20C3F74D2900088400CCDC4C /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		20C3F753290034CA00CCDC4C /* VideoUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoUserCollectionViewCell.swift; sourceTree = "<group>"; };
+		20C3F759290184AA00CCDC4C /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		20C579AB2910512E004355EB /* MediaPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPermissions.swift; sourceTree = "<group>"; };
+		20C9E90C29129B330080A4FF /* VideoCallWrapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallWrapperProtocol.swift; sourceTree = "<group>"; };
+		20C9E9122912B8E00080A4FF /* RoomConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomConfigurator.swift; sourceTree = "<group>"; };
+		20EA0BD12909726800EF14A3 /* GcoreVideoCallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcoreVideoCallButton.swift; sourceTree = "<group>"; };
+		20EA0BD3290976F900EF14A3 /* AlertFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFabric.swift; sourceTree = "<group>"; };
+		634082B2295E0884001D849F /* PreviewMainView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewMainView+Constraints.swift"; sourceTree = "<group>"; };
+		634082BC295E15E5001D849F /* RoomCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCollectionDelegate.swift; sourceTree = "<group>"; };
+		634082BE295E15F3001D849F /* RoomCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCollectionDataSource.swift; sourceTree = "<group>"; };
+		634082C0295E278B001D849F /* RoomMainView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomMainView+Constraints.swift"; sourceTree = "<group>"; };
+		637E7946295CAD4D0058C209 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		637E7949295D1C590058C209 /* String+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Common.swift"; sourceTree = "<group>"; };
+		637E794B295D1CE40058C209 /* UIImage+Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Images.swift"; sourceTree = "<group>"; };
+		637E794D295D1D000058C209 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
+		637E794F295D1D360058C209 /* UIFont+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Fonts.swift"; sourceTree = "<group>"; };
+		637E7951295D1D500058C209 /* UIStackView+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Init.swift"; sourceTree = "<group>"; };
+		637E7953295D1D700058C209 /* UILabel+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Init.swift"; sourceTree = "<group>"; };
+		637E7958295D1EC70058C209 /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
+		637E795A295D21010058C209 /* HomeMainView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeMainView+Constraints.swift"; sourceTree = "<group>"; };
+		637E795C295D280F0058C209 /* HomeCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDelegate.swift; sourceTree = "<group>"; };
+		637E795E295D28230058C209 /* HomeCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDataSource.swift; sourceTree = "<group>"; };
+		637E7962295D2C2F0058C209 /* PreviewMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMainView.swift; sourceTree = "<group>"; };
+		9556F50C41D1B6F3974A8260 /* Pods-GcoreVideoCalls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GcoreVideoCalls.debug.xcconfig"; path = "Target Support Files/Pods-GcoreVideoCalls/Pods-GcoreVideoCalls.debug.xcconfig"; sourceTree = "<group>"; };
+		AE1F03BD021C390937661DCF /* Pods_GcoreVideoCalls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GcoreVideoCalls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49D44467D621E499D3C8048 /* Pods-GcoreVideoCalls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GcoreVideoCalls.release.xcconfig"; path = "Target Support Files/Pods-GcoreVideoCalls/Pods-GcoreVideoCalls.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		633895FD27E9E77D007D339F /* Frameworks */ = {
+		209D48A328F7547A00051BFF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A16538A5C76B0D09C6C1A7F5 /* Pods_GCoreVideoCalls.framework in Frameworks */,
-				632DA21727E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework in Frameworks */,
+				2DB972723DBA310E0D670E60 /* Pods_GcoreVideoCalls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		499585090733A430A19AC0F7 /* Pods */ = {
+		205E76512906B281002B151F /* Collection Elements */ = {
 			isa = PBXGroup;
 			children = (
-				FEF0681E24F37A11D347752B /* Pods-GCoreVideoCalls.debug.xcconfig */,
-				F3B9B4D3CB9F1E5CF1C20FB2 /* Pods-GCoreVideoCalls.release.xcconfig */,
+				20C3F753290034CA00CCDC4C /* VideoUserCollectionViewCell.swift */,
+				201CEDD529194B9B0040DF15 /* CollectionFooter.swift */,
+				20C3F759290184AA00CCDC4C /* UserCollectionViewCell.swift */,
 			);
-			path = Pods;
+			path = "Collection Elements";
 			sourceTree = "<group>";
 		};
-		6306651E28182E9E00BA8164 /* VideoCallModule */ = {
+		209D489D28F7547A00051BFF = {
 			isa = PBXGroup;
 			children = (
-				63066526281837C900BA8164 /* Controller */,
-				63066527281837D900BA8164 /* View */,
-				630665252818378F00BA8164 /* ModeratorSubmodule */,
-			);
-			path = VideoCallModule;
-			sourceTree = "<group>";
-		};
-		630665252818378F00BA8164 /* ModeratorSubmodule */ = {
-			isa = PBXGroup;
-			children = (
-				63066529281837F100BA8164 /* View */,
-				63066528281837DE00BA8164 /* Controller */,
-				6306652B28183D4000BA8164 /* ModeratorMethods.swift */,
-			);
-			path = ModeratorSubmodule;
-			sourceTree = "<group>";
-		};
-		63066526281837C900BA8164 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6308999427F582E40023F1D8 /* GCVideoCallViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		63066527281837D900BA8164 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				630665232818355800BA8164 /* GCVideoCallCollectionView.swift */,
-				6306651F28182EE900BA8164 /* GCVideoCallBlurView.swift */,
-				63251D1527FF343D0060A484 /* GCVideoCallButton.swift */,
-				634226CE27EC47EF00B8672E /* GCVideoCallCollectionCell.swift */,
-				6308999627F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift */,
-				630665212818302200BA8164 /* GCVideoCallControlButtonsView.swift */,
-				635DECF2280DACBC003E349D /* GCLocalVideoView.swift */,
-				631C5E84281B677300252522 /* GCWaitingView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		63066528281837DE00BA8164 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				63059979281022EC006780A9 /* GCModeratorViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		63066529281837F100BA8164 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				63E1C69028144E30004192F0 /* GCModeratorControlView.swift */,
-				63A0B48E283CE6C3003A5440 /* GCModeratorButton.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		6306652A2818386500BA8164 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6308999A27F6312C0023F1D8 /* GCModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6308999327F4DA8C0023F1D8 /* Media */ = {
-			isa = PBXGroup;
-			children = (
-				63297A1827E9EC05007C5749 /* VideoCallWrapper.swift */,
-				6308999127F34C5B0023F1D8 /* SessionCaptureWrapper.swift */,
-			);
-			path = Media;
-			sourceTree = "<group>";
-		};
-		63251D0E27FF1FB80060A484 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				63251D1127FF20290060A484 /* GCBaseViewController.swift */,
-				6306651A28180BE000BA8164 /* GCTitleViewController.swift */,
-				6338960727E9E77D007D339F /* GCStartViewController.swift */,
-				636D765A27FB48F600F7C131 /* GCEndScreenViewController.swift */,
-				63D5AFE827F1BD33007A5CBC /* GCPreviewViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		63251D0F27FF1FE00060A484 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				634226E027ECB30900B8672E /* Montserrat_Regular.ttf */,
-				634226D427ECA2EA00B8672E /* Montserrat_Medium.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		63251D1027FF1FED0060A484 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				6338960327E9E77D007D339F /* AppDelegate.swift */,
-				634226D027EC794F00B8672E /* Extensions.swift */,
-				6338960C27E9E77F007D339F /* Assets.xcassets */,
-				6338960E27E9E77F007D339F /* LaunchScreen.storyboard */,
-				63251D0F27FF1FE00060A484 /* Fonts */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		633895F727E9E77D007D339F = {
-			isa = PBXGroup;
-			children = (
-				6338960227E9E77D007D339F /* GCoreVideoCalls */,
-				6338960127E9E77D007D339F /* Products */,
-				499585090733A430A19AC0F7 /* Pods */,
-				B296F98A7A42F4F0160FA1B4 /* Frameworks */,
+				209D48A828F7547A00051BFF /* GcoreVideoCalls */,
+				209D48A728F7547A00051BFF /* Products */,
+				4797BA93C6CA6CA11DCD9CE0 /* Pods */,
+				705B3F1899A7F0B2746EF3FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		6338960127E9E77D007D339F /* Products */ = {
+		209D48A728F7547A00051BFF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6338960027E9E77D007D339F /* GCoreVideoCalls.app */,
+				209D48A628F7547A00051BFF /* GcoreVideoCalls.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6338960227E9E77D007D339F /* GCoreVideoCalls */ = {
+		209D48A828F7547A00051BFF /* GcoreVideoCalls */ = {
 			isa = PBXGroup;
 			children = (
-				636FF454282188710053C7D1 /* Helpers */,
-				6306651E28182E9E00BA8164 /* VideoCallModule */,
-				6306652A2818386500BA8164 /* Model */,
-				63251D0E27FF1FB80060A484 /* Controller */,
-				63D5AFEE27F1EBB1007A5CBC /* View */,
-				6308999327F4DA8C0023F1D8 /* Media */,
-				63251D1027FF1FED0060A484 /* Other */,
-				6338961127E9E77F007D339F /* Info.plist */,
+				634082B6295E1290001D849F /* Services */,
+				637E7955295D1DDA0058C209 /* Core */,
+				209D48BE28F7561900051BFF /* Extensions */,
+				209D48D028F85BB900051BFF /* Helpers */,
+				637E7956295D1E420058C209 /* Modules */,
+				637E7948295D19F10058C209 /* Other */,
 			);
-			path = GCoreVideoCalls;
+			path = GcoreVideoCalls;
 			sourceTree = "<group>";
 		};
-		636FF454282188710053C7D1 /* Helpers */ = {
+		209D48BE28F7561900051BFF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				631C5E82281AC08E00252522 /* AlertFabric.swift */,
-				636FF45928218F8D0053C7D1 /* RoomInitialStateSetter.swift */,
+				637E794D295D1D000058C209 /* UIColor+Colors.swift */,
+				637E7949295D1C590058C209 /* String+Common.swift */,
+				637E794B295D1CE40058C209 /* UIImage+Images.swift */,
+				637E794F295D1D360058C209 /* UIFont+Fonts.swift */,
+				637E7951295D1D500058C209 /* UIStackView+Init.swift */,
+				637E7953295D1D700058C209 /* UILabel+Init.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		209D48D028F85BB900051BFF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				209D491128F9654B00051BFF /* LetterImageGenerator.swift */,
+				201BF17528FD3F5900FA4057 /* SizeHelper.swift */,
+				20EA0BD3290976F900EF14A3 /* AlertFabric.swift */,
+				205E76542907FE5C002B151F /* ActivityController.swift */,
+				637E7946295CAD4D0058C209 /* Logger.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		63D5AFEE27F1EBB1007A5CBC /* View */ = {
+		209D48E928F865B300051BFF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				634226E427EDFF1B00B8672E /* GCoreTextField.swift */,
-				634226E227ECBE9700B8672E /* GCoreButton.swift */,
-				63D5AFEA27F1D34C007A5CBC /* GCSwitch.swift */,
-				63D5AFEC27F1E209007A5CBC /* GCSwitchsLabel.swift */,
-				63D5AFEF27F1EBD2007A5CBC /* GCCameraPreview.swift */,
-				63B97EBC27FD8BC600638D94 /* GCSharedLinksStackView.swift */,
-				632960432812E24F00324DB5 /* GCTableViewCell.swift */,
-				6306651C2818282C00BA8164 /* GCCameraPositionButton.swift */,
+				209D48E428F865A700051BFF /* SFProDisplay-Medium.ttf */,
+				209D48E328F865A700051BFF /* SFProDisplay-Regular.ttf */,
+				209D48E528F865A700051BFF /* SFProDisplay-Semibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		209D491028F9653200051BFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				202B73ED290C001700D2FA9F /* RemoteUser.swift */,
+				20C579AB2910512E004355EB /* MediaPermissions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4797BA93C6CA6CA11DCD9CE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9556F50C41D1B6F3974A8260 /* Pods-GcoreVideoCalls.debug.xcconfig */,
+				B49D44467D621E499D3C8048 /* Pods-GcoreVideoCalls.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		634082B4295E1204001D849F /* ConnectWithLink */ = {
+			isa = PBXGroup;
+			children = (
+				209D48C628F845DE00051BFF /* ConnectWithLinkViewController.swift */,
+			);
+			path = ConnectWithLink;
+			sourceTree = "<group>";
+		};
+		634082B5295E1217001D849F /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				209D491028F9653200051BFF /* Model */,
+				20C3F74D2900088400CCDC4C /* RoomViewController.swift */,
+				202B73E9290BDEAD00D2FA9F /* RoomMainView.swift */,
+				634082C0295E278B001D849F /* RoomMainView+Constraints.swift */,
+				634082BC295E15E5001D849F /* RoomCollectionDelegate.swift */,
+				634082BE295E15F3001D849F /* RoomCollectionDataSource.swift */,
+				205E764D290674D4002B151F /* PinnedUserView.swift */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		634082B6295E1290001D849F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				634082BA295E12EB001D849F /* AudioDeviceHandler */,
+				634082B9295E12CE001D849F /* SessionCaptureWrapper */,
+				634082B8295E12B3001D849F /* RoomConfigurator */,
+				634082B7295E12A0001D849F /* VideoCallWrapper */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		634082B7295E12A0001D849F /* VideoCallWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				20C9E90C29129B330080A4FF /* VideoCallWrapperProtocol.swift */,
+				202B73EB290BE95200D2FA9F /* VideoCallWrapper.swift */,
+			);
+			path = VideoCallWrapper;
+			sourceTree = "<group>";
+		};
+		634082B8295E12B3001D849F /* RoomConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				20C9E9122912B8E00080A4FF /* RoomConfigurator.swift */,
+			);
+			path = RoomConfigurator;
+			sourceTree = "<group>";
+		};
+		634082B9295E12CE001D849F /* SessionCaptureWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				209D493528F9998B00051BFF /* SessionCaptureWrapper.swift */,
+			);
+			path = SessionCaptureWrapper;
+			sourceTree = "<group>";
+		};
+		634082BA295E12EB001D849F /* AudioDeviceHandler */ = {
+			isa = PBXGroup;
+			children = (
+				20845F5D290A9794001EF18E /* AudioDeviceHandler.swift */,
+			);
+			path = AudioDeviceHandler;
+			sourceTree = "<group>";
+		};
+		634082BB295E1471001D849F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				205E76512906B281002B151F /* Collection Elements */,
+				205E76522906EC48002B151F /* LetterImageView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		637E7948295D19F10058C209 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				209D48E928F865B300051BFF /* Fonts */,
+				209D48A928F7547A00051BFF /* AppDelegate.swift */,
+				209D48B228F7547B00051BFF /* Assets.xcassets */,
+				209D48B728F7547B00051BFF /* Info.plist */,
+				209D48B428F7547B00051BFF /* LaunchScreen.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		637E7955295D1DDA0058C209 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				209D48C428F8166E00051BFF /* GcoreButton.swift */,
+				20EA0BD12909726800EF14A3 /* GcoreVideoCallButton.swift */,
+				209D48CE28F84EFB00051BFF /* GcoreTextField.swift */,
+				209D48CA28F8460300051BFF /* BaseViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		637E7956295D1E420058C209 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				634082BB295E1471001D849F /* Common */,
+				634082B5295E1217001D849F /* Room */,
+				634082B4295E1204001D849F /* ConnectWithLink */,
+				637E7961295D2C1B0058C209 /* Preview */,
+				637E7957295D1E5E0058C209 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		637E7957295D1E5E0058C209 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				637E7960295D2B210058C209 /* View */,
+				209D48AD28F7547A00051BFF /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		637E7960295D2B210058C209 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				206BF23D28FB26AD00B76FC7 /* HomeScreenCollectionViewCell.swift */,
+				637E7958295D1EC70058C209 /* HomeMainView.swift */,
+				637E795C295D280F0058C209 /* HomeCollectionDelegate.swift */,
+				637E795E295D28230058C209 /* HomeCollectionDataSource.swift */,
+				637E795A295D21010058C209 /* HomeMainView+Constraints.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		B296F98A7A42F4F0160FA1B4 /* Frameworks */ = {
+		637E7961295D2C1B0058C209 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				632DA21627E9EF8D00902DE4 /* GCoreVideoCallsSDK.xcframework */,
-				7662F442DE39437D42F2DE2A /* Pods_GCoreVideoCalls.framework */,
+				201BF17C28FD990C00FA4057 /* GcoreVideoPreviewView.swift */,
+				20C3F74B28FFE11100CCDC4C /* CreateRoomViewController.swift */,
+				209D490E28F8B5CA00051BFF /* PreviewViewController.swift */,
+				634082B2295E0884001D849F /* PreviewMainView+Constraints.swift */,
+				637E7962295D2C2F0058C209 /* PreviewMainView.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		705B3F1899A7F0B2746EF3FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				201CEDD7291972910040DF15 /* GCoreVideoCallsSDK.xcframework */,
+				AE1F03BD021C390937661DCF /* Pods_GcoreVideoCalls.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -312,94 +380,92 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		633895FF27E9E77D007D339F /* GCoreVideoCalls */ = {
+		209D48A528F7547A00051BFF /* GcoreVideoCalls */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6338961427E9E77F007D339F /* Build configuration list for PBXNativeTarget "GCoreVideoCalls" */;
+			buildConfigurationList = 209D48BA28F7547B00051BFF /* Build configuration list for PBXNativeTarget "GcoreVideoCalls" */;
 			buildPhases = (
-				BD7BC36838B2C4AB0E417E75 /* [CP] Check Pods Manifest.lock */,
-				633895FC27E9E77D007D339F /* Sources */,
-				633895FD27E9E77D007D339F /* Frameworks */,
-				633895FE27E9E77D007D339F /* Resources */,
-				A2A22AAF3FE8B8655480042F /* [CP] Embed Pods Frameworks */,
-				632DA21927E9EF8D00902DE4 /* Embed Frameworks */,
+				C968104A61B3ED6D9ACEF4A0 /* [CP] Check Pods Manifest.lock */,
+				209D48A228F7547A00051BFF /* Sources */,
+				209D48A328F7547A00051BFF /* Frameworks */,
+				209D48A428F7547A00051BFF /* Resources */,
+				A70F1BE1E9C3D5231BFE82A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GCoreVideoCalls;
-			productName = GCoreVideoCalls;
-			productReference = 6338960027E9E77D007D339F /* GCoreVideoCalls.app */;
+			name = GcoreVideoCalls;
+			productName = EdgeCenter;
+			productReference = 209D48A628F7547A00051BFF /* GcoreVideoCalls.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		633895F827E9E77D007D339F /* Project object */ = {
+		209D489E28F7547A00051BFF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					633895FF27E9E77D007D339F = {
-						CreatedOnToolsVersion = 13.2.1;
+					209D48A528F7547A00051BFF = {
+						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 633895FB27E9E77D007D339F /* Build configuration list for PBXProject "GCoreVideoCalls" */;
+			buildConfigurationList = 209D48A128F7547A00051BFF /* Build configuration list for PBXProject "GcoreVideoCalls" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
-				fr,
-				de,
 			);
-			mainGroup = 633895F727E9E77D007D339F;
-			productRefGroup = 6338960127E9E77D007D339F /* Products */;
+			mainGroup = 209D489D28F7547A00051BFF;
+			productRefGroup = 209D48A728F7547A00051BFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				633895FF27E9E77D007D339F /* GCoreVideoCalls */,
+				209D48A528F7547A00051BFF /* GcoreVideoCalls */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		633895FE27E9E77D007D339F /* Resources */ = {
+		209D48A428F7547A00051BFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634226E127ECB30900B8672E /* Montserrat_Regular.ttf in Resources */,
-				6338961027E9E77F007D339F /* LaunchScreen.storyboard in Resources */,
-				634226D527ECA2EB00B8672E /* Montserrat_Medium.ttf in Resources */,
-				6338960D27E9E77F007D339F /* Assets.xcassets in Resources */,
+				209D48E828F865A700051BFF /* SFProDisplay-Semibold.ttf in Resources */,
+				209D48E728F865A700051BFF /* SFProDisplay-Medium.ttf in Resources */,
+				209D48B628F7547B00051BFF /* LaunchScreen.storyboard in Resources */,
+				209D48E628F865A700051BFF /* SFProDisplay-Regular.ttf in Resources */,
+				209D48B328F7547B00051BFF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A2A22AAF3FE8B8655480042F /* [CP] Embed Pods Frameworks */ = {
+		A70F1BE1E9C3D5231BFE82A8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GcoreVideoCalls/Pods-GcoreVideoCalls-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GcoreVideoCalls/Pods-GcoreVideoCalls-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GCoreVideoCalls/Pods-GCoreVideoCalls-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GcoreVideoCalls/Pods-GcoreVideoCalls-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD7BC36838B2C4AB0E417E75 /* [CP] Check Pods Manifest.lock */ = {
+		C968104A61B3ED6D9ACEF4A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,7 +480,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GCoreVideoCalls-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GcoreVideoCalls-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -424,55 +490,65 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		633895FC27E9E77D007D339F /* Sources */ = {
+		209D48A228F7547A00051BFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634226D127EC794F00B8672E /* Extensions.swift in Sources */,
-				63D5AFEB27F1D34C007A5CBC /* GCSwitch.swift in Sources */,
-				635DECF3280DACBC003E349D /* GCLocalVideoView.swift in Sources */,
-				631C5E85281B677300252522 /* GCWaitingView.swift in Sources */,
-				6308999527F582E40023F1D8 /* GCVideoCallViewController.swift in Sources */,
-				634226CF27EC47EF00B8672E /* GCVideoCallCollectionCell.swift in Sources */,
-				6306651B28180BE000BA8164 /* GCTitleViewController.swift in Sources */,
-				634226E527EDFF1B00B8672E /* GCoreTextField.swift in Sources */,
-				63251D1227FF20290060A484 /* GCBaseViewController.swift in Sources */,
-				634226E327ECBE9700B8672E /* GCoreButton.swift in Sources */,
-				6338960827E9E77D007D339F /* GCStartViewController.swift in Sources */,
-				6338960427E9E77D007D339F /* AppDelegate.swift in Sources */,
-				6308999227F34C5B0023F1D8 /* SessionCaptureWrapper.swift in Sources */,
-				6308999727F5838A0023F1D8 /* GCVideoCallButtonsStackView.swift in Sources */,
-				632960442812E24F00324DB5 /* GCTableViewCell.swift in Sources */,
-				631C5E83281AC08E00252522 /* AlertFabric.swift in Sources */,
-				63B97EBD27FD8BC600638D94 /* GCSharedLinksStackView.swift in Sources */,
-				63E1C69128144E30004192F0 /* GCModeratorControlView.swift in Sources */,
-				63297A1927E9EC05007C5749 /* VideoCallWrapper.swift in Sources */,
-				6306652C28183D4000BA8164 /* ModeratorMethods.swift in Sources */,
-				63D5AFED27F1E209007A5CBC /* GCSwitchsLabel.swift in Sources */,
-				6305997A281022EC006780A9 /* GCModeratorViewController.swift in Sources */,
-				636FF45A28218F8D0053C7D1 /* RoomInitialStateSetter.swift in Sources */,
-				63D5AFF027F1EBD2007A5CBC /* GCCameraPreview.swift in Sources */,
-				63D5AFE927F1BD33007A5CBC /* GCPreviewViewController.swift in Sources */,
-				63A0B48F283CE6C3003A5440 /* GCModeratorButton.swift in Sources */,
-				636D765B27FB48F600F7C131 /* GCEndScreenViewController.swift in Sources */,
-				630665222818302200BA8164 /* GCVideoCallControlButtonsView.swift in Sources */,
-				6306651D2818282C00BA8164 /* GCCameraPositionButton.swift in Sources */,
-				6306652028182EE900BA8164 /* GCVideoCallBlurView.swift in Sources */,
-				6308999B27F6312C0023F1D8 /* GCModel.swift in Sources */,
-				630665242818355800BA8164 /* GCVideoCallCollectionView.swift in Sources */,
-				63251D1627FF343D0060A484 /* GCVideoCallButton.swift in Sources */,
+				637E795F295D28230058C209 /* HomeCollectionDataSource.swift in Sources */,
+				634082C1295E278B001D849F /* RoomMainView+Constraints.swift in Sources */,
+				209D493628F9998B00051BFF /* SessionCaptureWrapper.swift in Sources */,
+				20EA0BD22909726800EF14A3 /* GcoreVideoCallButton.swift in Sources */,
+				209D48AE28F7547A00051BFF /* HomeViewController.swift in Sources */,
+				206BF23E28FB26AD00B76FC7 /* HomeScreenCollectionViewCell.swift in Sources */,
+				201BF17628FD3F5900FA4057 /* SizeHelper.swift in Sources */,
+				209D48C528F8166E00051BFF /* GcoreButton.swift in Sources */,
+				637E7954295D1D700058C209 /* UILabel+Init.swift in Sources */,
+				637E7963295D2C2F0058C209 /* PreviewMainView.swift in Sources */,
+				202B73EE290C001700D2FA9F /* RemoteUser.swift in Sources */,
+				637E7947295CAD4D0058C209 /* Logger.swift in Sources */,
+				209D490F28F8B5CA00051BFF /* PreviewViewController.swift in Sources */,
+				634082BD295E15E5001D849F /* RoomCollectionDelegate.swift in Sources */,
+				20C3F75B290184AA00CCDC4C /* UserCollectionViewCell.swift in Sources */,
+				201BF17D28FD990C00FA4057 /* GcoreVideoPreviewView.swift in Sources */,
+				201CEDD629194B9B0040DF15 /* CollectionFooter.swift in Sources */,
+				637E7959295D1EC70058C209 /* HomeMainView.swift in Sources */,
+				209D48CF28F84EFB00051BFF /* GcoreTextField.swift in Sources */,
+				637E7952295D1D500058C209 /* UIStackView+Init.swift in Sources */,
+				637E795B295D21010058C209 /* HomeMainView+Constraints.swift in Sources */,
+				637E7950295D1D360058C209 /* UIFont+Fonts.swift in Sources */,
+				20845F5E290A9794001EF18E /* AudioDeviceHandler.swift in Sources */,
+				20EA0BD4290976F900EF14A3 /* AlertFabric.swift in Sources */,
+				637E794E295D1D000058C209 /* UIColor+Colors.swift in Sources */,
+				634082B3295E0884001D849F /* PreviewMainView+Constraints.swift in Sources */,
+				20C9E90D29129B330080A4FF /* VideoCallWrapperProtocol.swift in Sources */,
+				20C9E9132912B8E00080A4FF /* RoomConfigurator.swift in Sources */,
+				637E794C295D1CE40058C209 /* UIImage+Images.swift in Sources */,
+				205E764E290674D4002B151F /* PinnedUserView.swift in Sources */,
+				209D48C728F845DE00051BFF /* ConnectWithLinkViewController.swift in Sources */,
+				205E76532906EC48002B151F /* LetterImageView.swift in Sources */,
+				20C3F755290034CA00CCDC4C /* VideoUserCollectionViewCell.swift in Sources */,
+				209D491228F9654B00051BFF /* LetterImageGenerator.swift in Sources */,
+				205E76552907FE5C002B151F /* ActivityController.swift in Sources */,
+				20C3F74C28FFE11100CCDC4C /* CreateRoomViewController.swift in Sources */,
+				20C3F74E2900088400CCDC4C /* RoomViewController.swift in Sources */,
+				202B73EA290BDEAD00D2FA9F /* RoomMainView.swift in Sources */,
+				637E794A295D1C590058C209 /* String+Common.swift in Sources */,
+				209D48AA28F7547A00051BFF /* AppDelegate.swift in Sources */,
+				634082BF295E15F3001D849F /* RoomCollectionDataSource.swift in Sources */,
+				20C579AC2910512E004355EB /* MediaPermissions.swift in Sources */,
+				209D48CB28F8460300051BFF /* BaseViewController.swift in Sources */,
+				202B73EC290BE95200D2FA9F /* VideoCallWrapper.swift in Sources */,
+				637E795D295D280F0058C209 /* HomeCollectionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6338960E27E9E77F007D339F /* LaunchScreen.storyboard */ = {
+		209D48B428F7547B00051BFF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6338960F27E9E77F007D339F /* Base */,
-				634226DE27ECA59300B8672E /* fr */,
-				634226DF27ECA5CF00B8672E /* de */,
+				209D48B528F7547B00051BFF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -480,15 +556,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6338961227E9E77F007D339F /* Debug */ = {
+		209D48B828F7547B00051BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -532,7 +606,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -542,15 +616,13 @@
 			};
 			name = Debug;
 		};
-		6338961327E9E77F007D339F /* Release */ = {
+		209D48B928F7547B00051BFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -588,7 +660,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -598,100 +670,96 @@
 			};
 			name = Release;
 		};
-		6338961527E9E77F007D339F /* Debug */ = {
+		209D48BB28F7547B00051BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEF0681E24F37A11D347752B /* Pods-GCoreVideoCalls.debug.xcconfig */;
+			baseConfigurationReference = 9556F50C41D1B6F3974A8260 /* Pods-GcoreVideoCalls.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = H667QRM4K6;
-				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GCoreVideoCalls/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Camera usage";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone usage";
+				INFOPLIST_FILE = GcoreVideoCalls/Other/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the GcoreVideoCalls app to access the camera?";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow the GcoreVideoCalls app to access the microphone?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = iosvideocallsdemo;
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gcore.videoCalls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
-		6338961627E9E77F007D339F /* Release */ = {
+		209D48BC28F7547B00051BFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3B9B4D3CB9F1E5CF1C20FB2 /* Pods-GCoreVideoCalls.release.xcconfig */;
+			baseConfigurationReference = B49D44467D621E499D3C8048 /* Pods-GcoreVideoCalls.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = H667QRM4K6;
-				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GCoreVideoCalls/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Camera usage";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone usage";
+				INFOPLIST_FILE = GcoreVideoCalls/Other/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the GcoreVideoCalls app to access the camera?";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow the GcoreVideoCalls app to access the microphone?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = iosvideocallsdemo;
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gcore.videoCalls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		633895FB27E9E77D007D339F /* Build configuration list for PBXProject "GCoreVideoCalls" */ = {
+		209D48A128F7547A00051BFF /* Build configuration list for PBXProject "GcoreVideoCalls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6338961227E9E77F007D339F /* Debug */,
-				6338961327E9E77F007D339F /* Release */,
+				209D48B828F7547B00051BFF /* Debug */,
+				209D48B928F7547B00051BFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6338961427E9E77F007D339F /* Build configuration list for PBXNativeTarget "GCoreVideoCalls" */ = {
+		209D48BA28F7547B00051BFF /* Build configuration list for PBXNativeTarget "GcoreVideoCalls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6338961527E9E77F007D339F /* Debug */,
-				6338961627E9E77F007D339F /* Release */,
+				209D48BB28F7547B00051BFF /* Debug */,
+				209D48BC28F7547B00051BFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 633895F827E9E77D007D339F /* Project object */;
+	rootObject = 209D489E28F7547A00051BFF /* Project object */;
 }

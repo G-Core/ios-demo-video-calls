@@ -1,16 +1,25 @@
 PODS:
+  - AdvancedPageControl (0.9.0)
+  - GCoreVideoCallsSDK (2.6.0)
   - mediasoup_ios_client (1.5.3)
 
 DEPENDENCIES:
+  - AdvancedPageControl
+  - GCoreVideoCallsSDK (= 2.6.0)
   - mediasoup_ios_client (= 1.5.3)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - AdvancedPageControl
     - mediasoup_ios_client
+  https://github.com/G-Core/ios-video-calls-SDK.git:
+    - GCoreVideoCallsSDK
 
 SPEC CHECKSUMS:
+  AdvancedPageControl: 39e3b32b00b2d324c534f8e17cc6c5be9abe84b7
+  GCoreVideoCallsSDK: 606d47044b3671e12492367de507257cba082d59
   mediasoup_ios_client: 100b82dc6a47dd72c9bc1897c9b8159de0b457a1
 
-PODFILE CHECKSUM: 0416eb49a17a476a9ae3dcde796f7d508aed132a
+PODFILE CHECKSUM: 60e4a7a70df24a9a2dfe60b025e42b17c7a40925
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
