@@ -6,16 +6,16 @@ final class ConnectWithLinkViewController: BaseViewController {
 
     private let mainLabel = UILabel(
         text: .connectionScreenHeader,
-        font: .edgeCenterSemiBoldFont(withSize: SizeHelper.screenHeight * 0.024)
+        font: .gcoreSemiBoldFont(withSize: SizeHelper.screenHeight * 0.024)
     )
 
     private let descriptionLabel = UILabel(
         text: .connectionScreenDescription,
-        font: .edgeCenterRegularFont(withSize: SizeHelper.screenHeight * 0.018)
+        font: .gcore(withSize: SizeHelper.screenHeight * 0.018)
     )
 
     private let nextButton = GcoreButton(
-        font: .edgeCenterSemiBoldFont(withSize: SizeHelper.screenHeight * 0.02),
+        font: .gcoreSemiBoldFont(withSize: SizeHelper.screenHeight * 0.02),
         image: nil,
         text: "Next"
     )

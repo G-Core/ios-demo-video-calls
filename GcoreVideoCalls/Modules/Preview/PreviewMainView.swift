@@ -28,12 +28,12 @@ final class PreviewMainView: UIView {
 
     private let warningLabel = UILabel(
         text:  .nameWarning,
-        font: .edgeCenterRegularFont(withSize: SizeHelper.screenHeight * 0.015),
+        font: .gcore(withSize: SizeHelper.screenHeight * 0.015),
         color: .customRed
     )
 
     private let connectButton = GcoreButton(
-        font: .edgeCenterSemiBoldFont(withSize: SizeHelper.screenHeight * 0.02),
+        font: .gcoreSemiBoldFont(withSize: SizeHelper.screenHeight * 0.02),
         image: nil,
         text: "Connect"
     )

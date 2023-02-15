@@ -21,7 +21,7 @@ final class VideoUserCollectionViewCell: UICollectionViewCell {
 
     private let nameLabel = UILabel(
         text: "Paprika",
-        font: .edgeCenterMediumlFont(withSize: SizeHelper.screenHeight * 0.018)
+        font: .gcoreMediumlFont(withSize: SizeHelper.screenHeight * 0.018)
     )
 
     //MARK: - Init

@@ -6,7 +6,7 @@ final class CollectionFooter: UICollectionReusableView {
     weak var delegate: ActivityPresenterProtocol!
 
     private let inviteButton = GcoreButton(
-        font: .edgeCenterSemiBoldFont(withSize: 16),
+        font: .gcoreSemiBoldFont(withSize: 16),
         image: .personImage,
         text: "Invite participants",
         bgColor: .clear

@@ -12,12 +12,12 @@ final class PinnedUserView: UIView {
 
     let pinLabel = UILabel(
         text: "Unpin",
-        font: .edgeCenterMediumlFont(withSize: SizeHelper.screenHeight * 0.014)
+        font: .gcoreMediumlFont(withSize: SizeHelper.screenHeight * 0.014)
     )
 
     private let nameLabel = UILabel(
         text: "Paprika",
-        font: .edgeCenterMediumlFont(withSize: SizeHelper.screenHeight * 0.018)
+        font: .gcoreMediumlFont(withSize: SizeHelper.screenHeight * 0.018)
     )
 
     private let microphoneImageView: UIImageView = {

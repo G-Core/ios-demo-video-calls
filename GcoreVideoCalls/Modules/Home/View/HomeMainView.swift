@@ -23,7 +23,7 @@ final class HomeMainView: UIView {
 
     private let descriptionLabel = UILabel(
         text: .homeScreenDescriptionText,
-        font: .edgeCenterRegularFont(withSize: SizeHelper.screenHeight * 0.018),
+        font: .gcore(withSize: SizeHelper.screenHeight * 0.018),
         color: .lightGrey
     )
 
@@ -56,13 +56,13 @@ final class HomeMainView: UIView {
     }()
 
     private let createVideoCallButton = GcoreButton(
-        font: .edgeCenterMediumlFont(withSize: SizeHelper.screenHeight * 0.019),
+        font: .gcoreMediumlFont(withSize: SizeHelper.screenHeight * 0.019),
         image: .createVideoCallImage,
         text: "Create video call"
     )
 
     private let connectWithLinkButton = GcoreButton(
-        font: .edgeCenterMediumlFont(withSize: SizeHelper.screenHeight * 0.019),
+        font: .gcoreMediumlFont(withSize: SizeHelper.screenHeight * 0.019),
         image: .linkImage,
         text: "Join by link",
         bgColor: .clear
