@@ -7,7 +7,7 @@ final class LetterImageGenerator: NSObject {
         let nameLabel = UILabel(frame: frame)
         nameLabel.textAlignment = .center
         nameLabel.textColor = .white
-        nameLabel.font = .gcore(withSize: 28)
+        nameLabel.font = .gcoreRegularFont(withSize: 28)
         
         var initials = ""
         

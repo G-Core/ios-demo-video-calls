@@ -11,7 +11,7 @@ final class ConnectWithLinkViewController: BaseViewController {
 
     private let descriptionLabel = UILabel(
         text: .connectionScreenDescription,
-        font: .gcore(withSize: SizeHelper.screenHeight * 0.018)
+        font: .gcoreRegularFont(withSize: SizeHelper.screenHeight * 0.018)
     )
 
     private let nextButton = GcoreButton(

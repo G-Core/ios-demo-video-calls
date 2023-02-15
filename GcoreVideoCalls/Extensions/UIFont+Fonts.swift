@@ -9,7 +9,7 @@ extension UIFont {
         UIFont(name: "SFProDisplay-Semibold", size: size)
     }
 
-    static func gcore(withSize size: CGFloat) -> UIFont? {
+    static func gcoreRegularFont(withSize size: CGFloat) -> UIFont? {
         UIFont(name: "SFProDisplay-Regular", size: size)
     }
 }

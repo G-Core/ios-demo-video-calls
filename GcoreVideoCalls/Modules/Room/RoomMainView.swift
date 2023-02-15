@@ -191,7 +191,7 @@ extension RoomMainView {
 
         config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
             var outgoing = incoming
-            outgoing.font = .gcore(withSize: 17)
+            outgoing.font = .gcoreRegularFont(withSize: 17)
             outgoing.foregroundColor = .white
             outgoing.strokeColor = .white
             return outgoing
@@ -202,7 +202,7 @@ extension RoomMainView {
 
     private func configureBackButtonByDefault() {
         backButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
-        backButton.titleLabel?.font = .gcore(withSize: 17)
+        backButton.titleLabel?.font = .gcoreRegularFont(withSize: 17)
         backButton.setTitle("Back to the tile", for: .normal)
         backButton.setImage(.leftArrowImage, for: .normal)
         backButton.setTitleColor(.white, for: .normal)

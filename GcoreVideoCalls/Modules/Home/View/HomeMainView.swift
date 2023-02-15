@@ -23,7 +23,7 @@ final class HomeMainView: UIView {
 
     private let descriptionLabel = UILabel(
         text: .homeScreenDescriptionText,
-        font: .gcore(withSize: SizeHelper.screenHeight * 0.018),
+        font: .gcoreRegularFont(withSize: SizeHelper.screenHeight * 0.018),
         color: .lightGrey
     )
 

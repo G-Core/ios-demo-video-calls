@@ -14,7 +14,7 @@ final class GcoreTextField: UITextField {
 
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor.lightGrey,
-            NSAttributedString.Key.font: UIFont.gcore(withSize: 17)
+            NSAttributedString.Key.font: UIFont.gcoreRegularFont(withSize: 17)
         ]
 
         attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes as [NSAttributedString.Key : Any])
