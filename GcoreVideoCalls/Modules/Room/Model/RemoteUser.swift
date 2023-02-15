@@ -3,18 +3,24 @@ import WebRTC
 
 struct RemoteUser {
     let view = RTCMTLVideoView()
-
-    var id: String = ""
-    var name: String = ""
-
+    let sharingView = RTCMTLVideoView()
     let bgColor: UIColor? = .colorForLetterImage.randomElement()
 
-    var isSpeaking: Bool = false
-    var isMicroEnable: Bool = false
-    var isVideoEnable: Bool = false
+    var isSpeaking = false
+    var isMicroEnable = false
+    var isVideoEnable = false
+    var isScreenSharing = false
+
+    var id = ""
+    var name = ""
+    var videoTrackID: String?
+    var screenTrackID: String?
 
     init(name: String = "", id: String = "") {
         self.name = name
         self.id = id
+        sharingView.videoContentMode = .scaleAspectFit
+        sharingView.isUserInteractionEnabled = false
+        view.isUserInteractionEnabled = false
     }
 }

@@ -6,6 +6,8 @@ protocol VideoCallWrapperDelegate: AnyObject {
     func updateRoomPermissions()
     func updateUserPermissions()
     func updatePinnedUser()
+    func remoteScreenSharingWasAdded(userID: String)
+    func remoteScreenSharingWasRemoved(userID: String)
 }
 
 protocol VideoCallWrapperProtocol {

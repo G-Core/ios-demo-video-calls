@@ -25,20 +25,19 @@ final class VideoUserCollectionViewCell: UICollectionViewCell {
     )
 
     //MARK: - Init
-
     override init(frame: CGRect) {
         super.init(frame: frame)
+        nameLabel.textAlignment = .left
 
         layer.cornerRadius = SizeHelper.viewCornerRadius
         layer.borderWidth = 1
         backgroundColor = .veryDarkBlue
         contentMode = .scaleAspectFit
         clipsToBounds = true
-        nameLabel.textAlignment = .left
 
         addSubview(letterImageView)
-
         letterImageView.isHidden = true
+        letterImageView.layer.cornerRadius = 16
 
         initConstraints()
     }
@@ -64,94 +63,67 @@ final class VideoUserCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Public methods & Actions
     func configure(with model: RemoteUser, and state: RoomState, isPinned: Bool = false) {
-        let isMicroEnable = model.isMicroEnable
-        let isVideoEnable = model.isVideoEnable
-        let isSpeaking = model.isSpeaking
         let isLocalUser = model.id == gcMeet.localUser?.id
-
         nameLabel.text = isLocalUser ? (model.name + " (you)") : model.name
-
-        stackView.isHidden = false
+       
         configStackView(state: state)
+        configureMicroImage(model: model)
+        configureBorder(model: model, state: state)
+        configureVideoView(model: model, state: state, isPinned: isPinned)
+        configureLetterImage(model: model, state: state, isPinned: isPinned)
+    }
 
-        if !isMicroEnable {
-            microphoneImageView.image = .disableMicro
-        } else {
-            microphoneImageView.image = isSpeaking ? .activeMicrophoneImage : .microphoneImage
-        }
-
-        switch (isVideoEnable, state, isSpeaking, isPinned) {
-        case (true, .tile, true, _):
-            addVideoView(model: model, state: state)
-            layer.borderColor = UIColor.green.cgColor
-
-        case (true, .tile, false, _), (true, .fullScreen, false, false) :
-            addVideoView(model: model, state: state)
-
-        case (false, .tile, _, _), (false, .fullScreen, false, false):
-            configLetterImage(with: model, and: state)
-
-        case (false, .fullScreen, _, true):
-            configLetterImage(with: model, and: state)
-            layer.borderColor = UIColor.customRed.cgColor
-
-        case (false, .fullScreen, true, false):
-            configLetterImage(with: model, and: state)
-            layer.borderColor = UIColor.green.cgColor
-
-        case (true, .fullScreen, true, false):
-            addVideoView(model: model, state: state)
-            layer.borderColor = UIColor.green.cgColor
-
-        case (true, .fullScreen, _, true):
-            configLetterImage(with: model, and: state)
-            layer.borderColor = UIColor.customRed.cgColor
-        }
+    func configureScreenSharing(with model: RemoteUser) {
+        nameLabel.text = model.name + " (screen)"
+        configStackView(state: .tile)
+        configureMicroImage(model: model)
+        configureBorder(model: model, state: .tile)
+        addVideoView(model.sharingView)
     }
 
     // MARK: - Private methods & Actions
-    private func addVideoView(model: RemoteUser, state: RoomState) {
-        let userView = model.view
-        userView.videoContentMode = .scaleAspectFill
-        userView.layer.cornerRadius = 8
-        userView.translatesAutoresizingMaskIntoConstraints = false
+    private func configureVideoView(model: RemoteUser, state: RoomState, isPinned: Bool) {
+        switch state {
+        case .fullScreen where isPinned:
+            guard model.isScreenSharing && model.isVideoEnable else { return } 
+        case .fullScreen, .tile:
+            guard model.isScreenSharing || model.isVideoEnable else { return }
+        }
 
-        insertSubview(userView, at: 0)
+        let userView = {
+            if state == .tile {
+                return model.view
+            }
+
+            if isPinned {
+                return model.view
+            } else {
+                return model.isScreenSharing ? model.sharingView : model.view
+            }
+        }()
+
+        addVideoView(userView)
+    }
+
+    private func addVideoView(_ view: RTCMTLVideoView) {
+        view.videoContentMode = .scaleAspectFill
+        view.layer.cornerRadius = 8
+        view.translatesAutoresizingMaskIntoConstraints = false
+        insertSubview(view, at: 0)
 
         NSLayoutConstraint.activate([
-            userView.topAnchor.constraint(equalTo:  topAnchor),
-            userView.leadingAnchor.constraint(equalTo:  leadingAnchor),
-            userView.trailingAnchor.constraint(equalTo:  trailingAnchor),
-            userView.bottomAnchor.constraint(equalTo:  bottomAnchor),
+            view.topAnchor.constraint(equalTo: topAnchor),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
 
         layoutIfNeeded()
     }
 
-    private func configLetterImage(with model: RemoteUser, and state: RoomState) {
-        let bottomPadding = -(SizeHelper.screenHeight * 0.014)
-
-        letterImageView.backgroundColor = model.bgColor
-        letterImageView.image = LetterImageGenerator.imageWith(name: model.name)
-        letterImageView.isHidden = false
-
-        if state == .fullScreen {
-            letterImageView.layer.cornerRadius = 16
-            NSLayoutConstraint.activate([
-                letterImageView.heightAnchor.constraint(equalToConstant: 32),
-                letterImageView.widthAnchor.constraint(equalToConstant: 32),
-                letterImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-                letterImageView.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: bottomPadding)
-            ])
-        } else {
-            NSLayoutConstraint.activate([
-                letterImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-                letterImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ])
-        }
-    }
-
     private func configStackView(state: RoomState) {
+        stackView.isHidden = false
+
         switch state {
         case .fullScreen:
             addConstraint(stackViewTrailingConstraint!)
@@ -211,5 +183,64 @@ final class VideoUserCollectionViewCell: UICollectionViewCell {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: stackViewLeftPadding),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: stackViewBottomPadding)
         ])
+    }
+}
+
+// MARK: - Private implementation
+private extension VideoUserCollectionViewCell {
+    func configureMicroImage(model: RemoteUser) {
+        if model.isMicroEnable {
+            microphoneImageView.image = model.isSpeaking ? .activeMicrophoneImage : .microphoneImage
+        } else {
+            microphoneImageView.image = .disableMicro
+        }
+    }
+
+    func configureLetterImage(model: RemoteUser, state: RoomState, isPinned: Bool) {
+        switch state {
+        case .fullScreen where isPinned:
+            guard !(model.isVideoEnable && model.isScreenSharing) else { return }
+        case .fullScreen, .tile:
+            guard !(model.isVideoEnable || model.isScreenSharing) else { return }
+        }
+
+        addLetterImage(with: model, and: state)
+    }
+
+    func addLetterImage(with model: RemoteUser, and state: RoomState) {
+        let bottomPadding = -(SizeHelper.screenHeight * 0.014)
+        letterImageView.backgroundColor = model.bgColor
+        letterImageView.image = LetterImageGenerator.imageWith(name: model.name)
+        letterImageView.isHidden = false
+
+        let constraints: [NSLayoutConstraint]
+        if state == .fullScreen {
+            constraints = [
+                letterImageView.heightAnchor.constraint(equalToConstant: 32),
+                letterImageView.widthAnchor.constraint(equalToConstant: 32),
+                letterImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+                letterImageView.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: bottomPadding)
+            ]
+        } else {
+            constraints = [
+                letterImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+                letterImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            ]
+        }
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    func configureBorder(model: RemoteUser, state: RoomState) {
+        guard model.isMicroEnable else { return }
+
+        if model.isSpeaking {
+            layer.borderColor = UIColor.green.cgColor
+            return
+        }
+
+        if state == .fullScreen {
+            layer.borderColor = UIColor.customRed.cgColor
+        }
     }
 }

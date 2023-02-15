@@ -10,11 +10,6 @@ final class PinnedUserView: UIView {
         return button
     }()
 
-    private var videoView: RTCEAGLVideoView = {
-        let videoView = RTCEAGLVideoView()
-        return videoView
-    }()
-
     let pinLabel = UILabel(
         text: "Unpin",
         font: .gcoreMediumlFont(withSize: SizeHelper.screenHeight * 0.014)
@@ -32,7 +27,6 @@ final class PinnedUserView: UIView {
     }()
 
     private let letterImageView = LetterImageView()
-
     private var stackView: UIStackView?
 
     init(model: RemoteUser = RemoteUser()) {
@@ -59,7 +53,7 @@ final class PinnedUserView: UIView {
         reloadView()
         self.model = model
 
-        if model.isVideoEnable {
+        if model.isScreenSharing || model.isVideoEnable {
             letterImageView.isHidden = true
             addVideoView(of: model)
         } else {
@@ -98,10 +92,9 @@ final class PinnedUserView: UIView {
     }
 
     private func addVideoView(of user: RemoteUser) {
-        let userVideoView = user.view
-
+        let userVideoView = user.isScreenSharing ? user.sharingView : user.view
         userVideoView.translatesAutoresizingMaskIntoConstraints = false
-        userVideoView.videoContentMode = .scaleAspectFill
+        userVideoView.videoContentMode = user.isScreenSharing ? .scaleAspectFit : .scaleAspectFill
 
         insertSubview(userVideoView, at: 0)
         clipsToBounds = true
@@ -164,5 +157,12 @@ final class PinnedUserView: UIView {
             pinLabel.centerYAnchor.constraint(equalTo: pinButton.centerYAnchor),
             pinLabel.trailingAnchor.constraint(equalTo: pinButton.leadingAnchor, constant: pinLabelTrailing)
         ])
+    }
+
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if pinButton.frame.insetBy(dx: -10, dy: -10).contains(point) {
+            return pinButton
+        }
+        return super.hitTest(point, with: event)
     }
 }

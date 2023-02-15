@@ -7,6 +7,7 @@ final class RoomCollectionDelegate: NSObject {
     var videoUsersData: () -> [RemoteUser] = { [] } 
     var noVideoUsersData: () -> [RemoteUser] = { [] }
     var remoteUsersData: () -> [RemoteUser] = { [] }
+    var screenSharingUsers: () -> [String] = { [] }
 }
 
 // MARK: - UICollectionViewDelegate
@@ -18,8 +19,15 @@ extension RoomCollectionDelegate: UICollectionViewDelegate {
         
         let user: RemoteUser
         switch state {
-        case .tile: user = indexPath.section == 0 ? videoUsers[indexPath.row] : noVideoUsers[indexPath.row]
-        case .fullScreen: user = remoteUsers[indexPath.row]
+        case .tile:
+            var index = indexPath.row
+            if indexPath.section == 0, indexPath.row > 0, !screenSharingUsers().isEmpty {
+                index -= 1
+            }
+            user = indexPath.section == 0 ? videoUsers[index] : noVideoUsers[index]
+
+        case .fullScreen:
+            user = remoteUsers[indexPath.row]
         }
         
         didSelectItem(user)

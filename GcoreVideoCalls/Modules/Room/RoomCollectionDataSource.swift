@@ -11,21 +11,25 @@ final class RoomCollectionDataSource: NSObject {
     var videoUsersData: () -> [RemoteUser] = { [] } 
     var noVideoUsersData: () -> [RemoteUser] = { [] }
     var remoteUsersData: () -> [RemoteUser] = { [] }
+    var screenSharingUsers: () -> [String] = { [] }
     var activityVCHandler: () -> Void = { }
 }
 
 extension RoomCollectionDataSource: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        switch state {
-        case .fullScreen: return 1
-        case .tile: return 2
-        }
+        state == .fullScreen ? 1 : 2
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch state {
-        case .tile: return section == 0 ? videoUsersData().count : noVideoUsersData().count
-        case .fullScreen: return remoteUsersData().count
+        case .tile:
+            var total = section == 0 ? videoUsersData().count : noVideoUsersData().count
+            if section == 0 && !screenSharingUsers().isEmpty {
+                total += 1
+            }
+            return total
+        case .fullScreen:
+            return remoteUsersData().count
         }
     }
 
@@ -54,12 +58,23 @@ extension RoomCollectionDataSource: UICollectionViewDataSource {
         case .fullScreen:
             user = remoteUsers[indexPath.row]
             let isSelected = (user.id == currentUserdId)
-            videoUserCell.configure(with: user, and: state, isPinned:  isSelected)
+            videoUserCell.configure(with: user, and: state, isPinned: isSelected)
             return videoUserCell
 
         case .tile:
+            if indexPath.section == 0 && indexPath.row == 0,
+               let id = screenSharingUsers().first,
+               let user = remoteUsers.first(where: { $0.id == id }) {
+                videoUserCell.configureScreenSharing(with: user)
+                return videoUserCell
+            }
+    
             if indexPath.section == 0 {
-                user = videoUsers[indexPath.row]
+                var index = indexPath.row
+                if !screenSharingUsers().isEmpty {
+                    index -= 1
+                }
+                user = videoUsers[index]
                 videoUserCell.configure(with: user, and: state)
                 return videoUserCell
             }
