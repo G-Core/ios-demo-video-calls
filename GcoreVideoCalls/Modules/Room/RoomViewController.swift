@@ -46,8 +46,8 @@ final class RoomViewController: BaseViewController {
     private var remoteUsers = [RemoteUser]()
     private var videoUsers = [RemoteUser]()
     private var noVideoUsers = [RemoteUser]()
+    private var screenSharingUserIDs: [String] = []
     private var localUserId: String?
-    
 
     private lazy var mainView = RoomMainView(delegate: self)
     private let gcMeet = GCoreMeet.shared
@@ -80,17 +80,14 @@ final class RoomViewController: BaseViewController {
     private func updateCollection() {
         DispatchQueue.main.async { [self] in
             remoteUsers = sortActiveMicrophoneUsers(users: roomSession.remoteUsers)
-
             let unsrotedVideoUsers = remoteUsers.filter { $0.isVideoEnable }
             let sortedVideoUsers = sortActiveMicrophoneUsers(users: unsrotedVideoUsers)
 
             videoUsers = sortActiveMicrophoneUsers(users: sortedVideoUsers)
-
             let unsortedNoVideoUsers = remoteUsers.filter { !($0.isVideoEnable) }
             let sortedNoVideoUsers = sortActiveMicrophoneUsers(users: unsortedNoVideoUsers)
 
             noVideoUsers = sortActiveMicrophoneUsers(users: sortedNoVideoUsers)
-
             mainView.collectionView.reloadData()
 
             if state == .fullScreen {
@@ -132,6 +129,7 @@ final class RoomViewController: BaseViewController {
     }
 }
 
+// MARK: - VideoCallWrapperDelegate
 extension RoomViewController: VideoCallWrapperDelegate {
     func updateData() {
         updateCollection()
@@ -200,6 +198,10 @@ extension RoomViewController: VideoCallWrapperDelegate {
             self?.videoUsers ?? []
         }
 
+        collectionDelegate.screenSharingUsers = { [weak self] in
+            self?.screenSharingUserIDs ?? []
+        }
+
         collectionDataSource.noVideoUsersData = { [weak self] in
             self?.noVideoUsers ?? []
         }
@@ -210,6 +212,10 @@ extension RoomViewController: VideoCallWrapperDelegate {
 
         collectionDataSource.videoUsersData = { [weak self] in
             self?.videoUsers ?? []
+        }
+
+        collectionDataSource.screenSharingUsers = { [weak self] in
+            self?.screenSharingUserIDs ?? []
         }
 
         collectionDataSource.activityVCHandler = { [weak self] in
@@ -234,8 +240,21 @@ extension RoomViewController: VideoCallWrapperDelegate {
     }
     
     func updatePinnedUser() {
+        guard !mainView.isPinned else { return }
         if let speaker = roomSession.remoteUsers.first(where: { $0.isSpeaking }) {
             pinnedUserId = speaker.id
+        }
+    }
+
+    func remoteScreenSharingWasAdded(userID: String) {
+        screenSharingUserIDs += [userID]
+    }
+
+    func remoteScreenSharingWasRemoved(userID: String) {
+        let isFirst = screenSharingUserIDs.first == userID
+        screenSharingUserIDs.removeAll { $0 == userID }
+        if isFirst {
+            mainView.collectionView.reloadData()
         }
     }
 }
@@ -243,11 +262,10 @@ extension RoomViewController: VideoCallWrapperDelegate {
 extension RoomViewController: RoomMainViewDelegate {
     func toggleVideo() {
         if SessionCaptureWrapper.checkVideoPermissions() {
-            guard let localUserId,
-                  let index = roomSession.remoteUsers.firstIndex(where: { $0.id == localUserId })
-            else {
+            guard let localUserId, let index = roomSession.remoteUsers.firstIndex(where: { $0.id == localUserId }) else {
                 return
             }
+
             roomSession.remoteUsers[index].isVideoEnable.toggle()
             let isEnable = roomSession.remoteUsers[index].isVideoEnable
             gcMeet.localUser?.toggleCam(isOn: isEnable)
@@ -301,7 +319,6 @@ extension RoomViewController: RoomMainViewDelegate {
             self?.gcMeet.localUser?.toggleMic(isOn: false)
             self?.roomSession.isExeting = true
             self?.gcMeet.close()
-
             self?.navigationController?.popToRootViewController(animated: true)
         }
 

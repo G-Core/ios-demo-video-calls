@@ -6,7 +6,7 @@ source 'https://github.com/CocoaPods/Specs'
 target 'GcoreVideoCalls' do
 
    use_frameworks!
-   pod 'GCoreVideoCallsSDK', '2.6.0'
+  pod "GCoreVideoCallsSDK", '2.6.1'
    pod "mediasoup_ios_client", '1.5.3'
    pod 'AdvancedPageControl'
 

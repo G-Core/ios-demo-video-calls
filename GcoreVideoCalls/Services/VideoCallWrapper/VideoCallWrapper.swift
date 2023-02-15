@@ -178,83 +178,81 @@ extension VideoCallWrapper: GCoreRoomListener {
         }
     }
 
-    func roomClientHandle(_ client: GCoreVideoCallsSDK.GCoreRoomClient, mediaEvent: GCoreVideoCallsSDK.GCoreMediaEvent) {
+    func roomClientHandle(_ client: GCoreRoomClient, mediaEvent: GCoreMediaEvent) {
         switch mediaEvent {
-        case .handledRemoteVideo(videoObject: let videoObject):
-            let userId = videoObject.userId
-
-            if let index = self.findIndexFor(userId: userId) {
-                self.remoteUsers[index].isVideoEnable = true
-
-                let remoteUser = self.remoteUsers[index]
-
-                videoObject.rtcVideoTrack.add(remoteUser.view)
-            }
-
+        case .handledRemoteVideo(videoObject: let object):
+            guard let index = findIndexFor(userId: object.userId) else { return }
+            remoteUsers[index].isVideoEnable = true
+            remoteUsers[index].videoTrackID = object.rtcVideoTrack.trackId
+            object.rtcVideoTrack.add(remoteUsers[index].view)
+            
         case .produceLocalVideo(track: let videoTrack):
-            if let index = findIndexFor(userId: gcMeet.localUser?.id) {
-                remoteUsers[index].isVideoEnable = true
-                let remoteUser = remoteUsers[index]
-                videoTrack.add(remoteUser.view)
-            }
-
+            guard let index = findIndexFor(userId: gcMeet.localUser?.id) else { return }
+            remoteUsers[index].isVideoEnable = true
+            let remoteUser = remoteUsers[index]
+            videoTrack.add(remoteUser.view)
+            
         case .didCloseLocalVideo(track: let videoTrack):
-            if !isExeting {
-                if let index = findIndexFor(userId: gcMeet.localUser?.id) {
-                    videoTrack?.remove(remoteUsers[index].view)
-                }
-            }
-        case .produceRemoteAudio(audioObject: let audioObject):
-            if let index = findIndexFor(userId: audioObject.userId) {
-                remoteUsers[index].isSpeaking = true
-                remoteUsers[index].isMicroEnable = true
-            }
-
+            guard !isExeting, let index = findIndexFor(userId: gcMeet.localUser?.id) else { return }
+            videoTrack?.remove(remoteUsers[index].view)
+            
+        case .produceRemoteAudio(audioObject: let object):
+            guard let index = findIndexFor(userId: object.userId) else { return }
+            remoteUsers[index].isSpeaking = true
+            remoteUsers[index].isMicroEnable = true
+            
         case .didCloseLocalAudio(track: _):
-            if !isExeting {
-                if let index = findIndexFor(userId: gcMeet.localUser?.id) {
-                    remoteUsers[index].isSpeaking = false
-                }
-            }
-
+            guard !isExeting, let index = findIndexFor(userId: gcMeet.localUser?.id) else { return }
+            remoteUsers[index].isSpeaking = false
+            
         case .produceLocalAudio(track: _):
-            for index in remoteUsers.indices {
-                if remoteUsers[index].id == gcMeet.localUser?.id {
-                    remoteUsers[index].isMicroEnable = true
-                    remoteUsers[index].isSpeaking = true
-                }
-            }
-
-        case .didCloseRemoteAudio(byModerator: _, audioObject: let audioObject):
-            if let index = findIndexFor(userId: audioObject.userId) {
-                remoteUsers[index].isSpeaking = false
-                remoteUsers[index].isMicroEnable = false
-            }
-
-        case .didCloseRemoteVideo(byModerator: _, videoObject: let videoObject):
-            if let index = findIndexFor(userId: videoObject.userId) {
-                videoObject.rtcVideoTrack.remove(remoteUsers[index].view)
-
+            guard let index = remoteUsers.firstIndex(where: { $0.id == gcMeet.localUser?.id }) else { return }
+            remoteUsers[index].isMicroEnable = true
+            remoteUsers[index].isSpeaking = true
+            
+        case .didCloseRemoteAudio(byModerator: _, audioObject: let object):
+            guard let index = findIndexFor(userId: object.userId) else { return }
+            remoteUsers[index].isSpeaking = false
+            remoteUsers[index].isMicroEnable = false
+            
+        case .didCloseRemoteVideo(byModerator: _, videoObject: let object):
+            guard let index = findIndexFor(userId: object.userId) else { return }
+            
+            if remoteUsers[index].videoTrackID == object.rtcVideoTrack.trackId {
+                remoteUsers[index].videoTrackID = nil
+                object.rtcVideoTrack.remove(remoteUsers[index].view)
                 remoteUsers[index].isVideoEnable = false
+            } else {
+                remoteUsers[index].screenTrackID = nil
+                object.rtcVideoTrack.remove(remoteUsers[index].sharingView)
+                remoteUsers[index].isScreenSharing = false
+                delegate?.remoteScreenSharingWasRemoved(userID: object.userId)
             }
-
+            
         case .disableProducerByModerator(media: let mediaKind):
             switch mediaKind {
             case .video: roomPermissions.video = false
             case .audio: roomPermissions.audio = false
             default: return
             }
-
+            
             delegate?.updateRoomPermissions()
-
+            
         case .togglePermissionsByModerator(kind: let mediaKind, status: let status):
             switch mediaKind {
             case .audio: roomPermissions.audio = status
             case .video: roomPermissions.video = status
             default: return
             }
-
+            
             delegate?.updateRoomPermissions()
+            
+        case .handledRemoteScreenSharing(videoObject: let object):
+            guard let index = findIndexFor(userId: object.userId) else { return }
+            object.rtcVideoTrack.add(remoteUsers[index].sharingView)
+            remoteUsers[index].screenTrackID = object.rtcVideoTrack.trackId
+            remoteUsers[index].isScreenSharing = true
+            delegate?.remoteScreenSharingWasAdded(userID: object.userId)
 
         default:
             return

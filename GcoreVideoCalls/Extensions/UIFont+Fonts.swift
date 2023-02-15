@@ -1,15 +1,15 @@
 import UIKit
 
 extension UIFont {
-    static func gcoreMediumlFont(withSize size: CGFloat) -> UIFont? {
+    static func edgeCenterMediumlFont(withSize size: CGFloat) -> UIFont? {
         UIFont(name: "SFProDisplay-Medium", size: size)
     }
 
-    static func gcoreSemiBoldFont(withSize size: CGFloat) -> UIFont? {
+    static func edgeCenterSemiBoldFont(withSize size: CGFloat) -> UIFont? {
         UIFont(name: "SFProDisplay-Semibold", size: size)
     }
 
-    static func gcoreRegularFont(withSize size: CGFloat) -> UIFont? {
+    static func edgeCenterRegularFont(withSize size: CGFloat) -> UIFont? {
         UIFont(name: "SFProDisplay-Regular", size: size)
     }
 }

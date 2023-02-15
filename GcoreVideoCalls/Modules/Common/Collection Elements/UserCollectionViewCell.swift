@@ -9,7 +9,7 @@ final class UserCollectionViewCell: UICollectionViewCell {
     private let letterImageView = LetterImageView(size: SizeHelper.letterImageRectangularCellSize)
 
     private let nameLabel = UILabel(
-        font: .gcoreMediumlFont(withSize: SizeHelper.screenHeight * 0.018)
+        font: .edgeCenterMediumlFont(withSize: SizeHelper.screenHeight * 0.018)
     )
 
     private let microphoneImageView: UIImageView = {

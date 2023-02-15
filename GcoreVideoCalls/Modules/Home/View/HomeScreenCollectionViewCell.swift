@@ -12,7 +12,7 @@ final class HomeScreenCollectionViewCell: UICollectionViewCell {
 
     private let descriptionLabel: UILabel = {
         let fontSize = SizeHelper.screenHeight * 0.029
-        let font: UIFont? = .gcoreSemiBoldFont(withSize: fontSize)
+        let font: UIFont? = .edgeCenterSemiBoldFont(withSize: fontSize)
         return UILabel(font: font)
     }()
 
